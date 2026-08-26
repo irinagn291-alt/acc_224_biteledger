@@ -1,0 +1,12 @@
+BiteLedger is a personal food ledger that posts every bite as a debit against the day's energy budget. It is for anyone who wants calorie and macro tracking framed as a ruled book on the device.
+
+• Ledger shows today's energy, running balance, and Protein, Carbs, and Fat against your targets, with Opening Entry, Midday Entry, Closing Entry, and Petty Cash slots
+• Lookup searches the public Open Food Facts catalogue (plus a bundled local shelf when the wire is down)
+• Scan reads packet barcodes with the camera, or you can type a barcode and Post code
+• Folio lets you set portion grams, then Assign to Post entry as Eaten today or Plan ahead
+• Statement lists the day's lines with a balance column and Export CSV
+• Planner covers the next 14 days; convert a plan with Post as eaten today
+• Wishlist saves a folio when you mean to buy it
+• Goals sets Energy kcal, Protein g, Carbs g, and Fat g, with Reset all data and Contact BiteLedger
+
+Ledger data is stored on the device. No account is required.

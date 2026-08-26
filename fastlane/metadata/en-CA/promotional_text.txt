@@ -1,0 +1,1 @@
+Post packaged foods as ledger debits against daily energy and macro targets. Lookup Open Food Facts, scan barcodes, plan ahead, and export a CSV statement.

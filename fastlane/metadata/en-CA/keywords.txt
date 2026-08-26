@@ -1,0 +1,1 @@
+openfoodfacts,calorie,macro,barcode,scanner,nutrition,protein,carbs,fat,diary,planner,wishlist,csv
