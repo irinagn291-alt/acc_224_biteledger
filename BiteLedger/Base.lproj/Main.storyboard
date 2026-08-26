@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22900" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LCH1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22900"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="sLCH">
+            <objects>
+                <viewController storyboardIdentifier="BLGLaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LCH1" customClass="BLGLaunchViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LCHV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="blg_Splash" translatesAutoresizingMaskIntoConstraints="NO" id="LCHI"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LCHS"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="LCHI" firstAttribute="top" secondItem="LCHV" secondAttribute="top" id="LCc1"/>
+                            <constraint firstItem="LCHI" firstAttribute="leading" secondItem="LCHV" secondAttribute="leading" id="LCc2"/>
+                            <constraint firstItem="LCHI" firstAttribute="trailing" secondItem="LCHV" secondAttribute="trailing" id="LCc3"/>
+                            <constraint firstItem="LCHI" firstAttribute="bottom" secondItem="LCHV" secondAttribute="bottom" id="LCc4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blgSplashView" destination="LCHI" id="LCo1"/>
+                        <segue destination="ONB1" kind="presentation" identifier="blg_presentOnboarding" modalPresentationStyle="fullScreen" id="LCg1"/>
+                        <segue destination="DRW1" kind="presentation" identifier="blg_presentDrawer" modalPresentationStyle="fullScreen" id="LCg2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="0"/>
+        </scene>
+        <scene sceneID="sONB">
+            <objects>
+                <viewController storyboardIdentifier="BLGOnboardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ONB1" customClass="BLGOnboardingViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ONBV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONBS">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="fill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ONBK">
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_Onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="ONBI">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="280" id="ONh1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="ONBT"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Body" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="ONBB"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ONBX">
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholder="kcal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONBF1">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ONf1"/>
+                                                        </constraints>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholder="protein" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONBF2">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ONf2"/>
+                                                        </constraints>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholder="carbs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONBF3">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ONf3"/>
+                                                        </constraints>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholder="fat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONBF4">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ONf4"/>
+                                                        </constraints>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ONBP"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONBN">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ONn1"/>
+                                                </constraints>
+                                                <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="blg_next:" destination="ONB1" eventType="touchUpInside" id="ONa1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONBK2">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ONn2"/>
+                                                </constraints>
+                                                <state key="normal" title="Skip"/>
+                                                <connections>
+                                                    <action selector="blg_skip:" destination="ONB1" eventType="touchUpInside" id="ONa2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ONBK" firstAttribute="leading" secondItem="ONBS" secondAttribute="leading" constant="24" id="ONs1"/>
+                                    <constraint firstItem="ONBK" firstAttribute="trailing" secondItem="ONBS" secondAttribute="trailing" constant="-24" id="ONs2"/>
+                                    <constraint firstItem="ONBK" firstAttribute="top" secondItem="ONBS" secondAttribute="top" constant="16" id="ONs3"/>
+                                    <constraint firstItem="ONBK" firstAttribute="bottom" secondItem="ONBS" secondAttribute="bottom" constant="-16" id="ONs4"/>
+                                    <constraint firstItem="ONBK" firstAttribute="width" secondItem="ONBS" secondAttribute="width" constant="-48" id="ONs5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ONBA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="ONBS" firstAttribute="top" secondItem="ONBA" secondAttribute="top" id="ONc1"/>
+                            <constraint firstItem="ONBS" firstAttribute="leading" secondItem="ONBA" secondAttribute="leading" id="ONc2"/>
+                            <constraint firstItem="ONBS" firstAttribute="trailing" secondItem="ONBA" secondAttribute="trailing" id="ONc3"/>
+                            <constraint firstItem="ONBS" firstAttribute="bottom" secondItem="ONBA" secondAttribute="bottom" id="ONc4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blgScrollView" destination="ONBS" id="ONo1"/>
+                        <outlet property="blgImageView" destination="ONBI" id="ONo2"/>
+                        <outlet property="blgTitleLabel" destination="ONBT" id="ONo3"/>
+                        <outlet property="blgBodyLabel" destination="ONBB" id="ONo4"/>
+                        <outlet property="blgPageControl" destination="ONBP" id="ONo5"/>
+                        <outlet property="blgSkipButton" destination="ONBK2" id="ONo6"/>
+                        <outlet property="blgNextButton" destination="ONBN" id="ONo7"/>
+                        <outlet property="blgTargetsStack" destination="ONBX" id="ONo8"/>
+                        <outlet property="blgKcalField" destination="ONBF1" id="ONo9"/>
+                        <outlet property="blgProteinField" destination="ONBF2" id="ONo10"/>
+                        <outlet property="blgCarbsField" destination="ONBF3" id="ONo11"/>
+                        <outlet property="blgFatField" destination="ONBF4" id="ONo12"/>
+                        <segue destination="DRW1" kind="presentation" identifier="blg_presentDrawer" modalPresentationStyle="fullScreen" id="ONg1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="0"/>
+        </scene>
+        <scene sceneID="sDRW">
+            <objects>
+                <viewController storyboardIdentifier="BLGDrawerContainerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DRW1" customClass="BLGDrawerContainerController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRWV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRWC">
+                                <connections>
+                                    <segue destination="NAV1" kind="embed" identifier="blg_embedNav" id="DRWg1"/>
+                                </connections>
+                            </containerView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRWD">
+                                <color key="backgroundColor" name="blg_ink"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRWM">
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" estimatedRowHeight="52" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DRWT">
+                                        <color key="backgroundColor" name="blg_surface"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="BLGDrawerCell" id="DRWTC">
+                                                <rect key="frame" x="0.0" y="50" width="260" height="52"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DRWTV"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" name="blg_surface"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="DRWw1"/>
+                                    <constraint firstItem="DRWT" firstAttribute="top" secondItem="DRWM" secondAttribute="top" id="DRWw2"/>
+                                    <constraint firstItem="DRWT" firstAttribute="leading" secondItem="DRWM" secondAttribute="leading" id="DRWw3"/>
+                                    <constraint firstItem="DRWT" firstAttribute="trailing" secondItem="DRWM" secondAttribute="trailing" id="DRWw4"/>
+                                    <constraint firstItem="DRWT" firstAttribute="bottom" secondItem="DRWM" secondAttribute="bottom" id="DRWw5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DRWA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="DRWC" firstAttribute="top" secondItem="DRWV" secondAttribute="top" id="DRc1"/>
+                            <constraint firstItem="DRWC" firstAttribute="leading" secondItem="DRWV" secondAttribute="leading" id="DRc2"/>
+                            <constraint firstItem="DRWC" firstAttribute="trailing" secondItem="DRWV" secondAttribute="trailing" id="DRc3"/>
+                            <constraint firstItem="DRWC" firstAttribute="bottom" secondItem="DRWV" secondAttribute="bottom" id="DRc4"/>
+                            <constraint firstItem="DRWD" firstAttribute="top" secondItem="DRWV" secondAttribute="top" id="DRc5"/>
+                            <constraint firstItem="DRWD" firstAttribute="leading" secondItem="DRWV" secondAttribute="leading" id="DRc6"/>
+                            <constraint firstItem="DRWD" firstAttribute="trailing" secondItem="DRWV" secondAttribute="trailing" id="DRc7"/>
+                            <constraint firstItem="DRWD" firstAttribute="bottom" secondItem="DRWV" secondAttribute="bottom" id="DRc8"/>
+                            <constraint firstItem="DRWM" firstAttribute="top" secondItem="DRWV" secondAttribute="top" id="DRc9"/>
+                            <constraint firstItem="DRWM" firstAttribute="bottom" secondItem="DRWV" secondAttribute="bottom" id="DRc10"/>
+                            <constraint firstItem="DRWM" firstAttribute="leading" secondItem="DRWV" secondAttribute="leading" constant="-260" id="DRc11"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blgContentContainer" destination="DRWC" id="DRo1"/>
+                        <outlet property="blgDimView" destination="DRWD" id="DRo2"/>
+                        <outlet property="blgMenuView" destination="DRWM" id="DRo3"/>
+                        <outlet property="blgMenuTableView" destination="DRWT" id="DRo4"/>
+                        <outlet property="blgMenuLeading" destination="DRc11" id="DRo5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="0"/>
+        </scene>
+        <scene sceneID="sNAV">
+            <objects>
+                <navigationController storyboardIdentifier="BLGRootNavigation" automaticallyAdjustsScrollViewInsets="NO" id="NAV1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAVB">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LED1" kind="relationship" relationship="rootViewController" id="NAVg1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="0"/>
+        </scene>
+
+        <scene sceneID="sLED">
+            <objects>
+                <viewController storyboardIdentifier="BLGLedgerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LED1" customClass="BLGLedgerViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LEDV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEDS">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LEDK">
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="blg_HeaderDecor" translatesAutoresizingMaskIntoConstraints="NO" id="LEDH">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="LEh1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Day" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEDD"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEDE"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="of target" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEDT"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEDB"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Over budget" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEDO"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LEDM">
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LEDMP">
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_MacroProtein" translatesAutoresizingMaskIntoConstraints="NO" id="LEDIP">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="32" id="LEi1"/>
+                                                                    <constraint firstAttribute="width" constant="32" id="LEi2"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="P" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="LEDLP"/>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LEDMC">
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_MacroCarbs" translatesAutoresizingMaskIntoConstraints="NO" id="LEDIC">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="32" id="LEi3"/>
+                                                                    <constraint firstAttribute="width" constant="32" id="LEi4"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="LEDLC"/>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LEDMF">
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_MacroFat" translatesAutoresizingMaskIntoConstraints="NO" id="LEDIF">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="32" id="LEi5"/>
+                                                                    <constraint firstAttribute="width" constant="32" id="LEi6"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="F" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="LEDLF"/>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LEDN">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="LEDB1">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LEb1"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Lookup"/>
+                                                        <connections>
+                                                            <action selector="blg_openLookup:" destination="LED1" eventType="touchUpInside" id="LEa1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="LEDB2">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LEb2"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Scan"/>
+                                                        <connections>
+                                                            <action selector="blg_openScan:" destination="LED1" eventType="touchUpInside" id="LEa2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="LEDB3">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LEb3"/>
+                                                </constraints>
+                                                <state key="normal" title="Statement"/>
+                                                <connections>
+                                                    <action selector="blg_openStatement:" destination="LED1" eventType="touchUpInside" id="LEa3"/>
+                                                </connections>
+                                            </button>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" translatesAutoresizingMaskIntoConstraints="NO" id="LEDTV">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="288" id="LEt1"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BLGEntryCell" id="LEDTC" customClass="BLGEntryCell" customModule="BiteLedger" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="366" height="72"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LEDTW"/>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEDEMP" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="280" id="LEe1"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LEDK" firstAttribute="leading" secondItem="LEDS" secondAttribute="leading" constant="16" id="LEs1"/>
+                                    <constraint firstItem="LEDK" firstAttribute="trailing" secondItem="LEDS" secondAttribute="trailing" constant="-16" id="LEs2"/>
+                                    <constraint firstItem="LEDK" firstAttribute="top" secondItem="LEDS" secondAttribute="top" constant="8" id="LEs3"/>
+                                    <constraint firstItem="LEDK" firstAttribute="bottom" secondItem="LEDS" secondAttribute="bottom" constant="-16" id="LEs4"/>
+                                    <constraint firstItem="LEDK" firstAttribute="width" secondItem="LEDS" secondAttribute="width" constant="-32" id="LEs5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LEDA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="LEDS" firstAttribute="top" secondItem="LEDA" secondAttribute="top" id="LEc1"/>
+                            <constraint firstItem="LEDS" firstAttribute="leading" secondItem="LEDA" secondAttribute="leading" id="LEc2"/>
+                            <constraint firstItem="LEDS" firstAttribute="trailing" secondItem="LEDA" secondAttribute="trailing" id="LEc3"/>
+                            <constraint firstItem="LEDS" firstAttribute="bottom" secondItem="LEDA" secondAttribute="bottom" id="LEc4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ledger" id="LEDNIV">
+                        <barButtonItem key="leftBarButtonItem" title="Prev" id="LEDPV">
+                            <connections>
+                                <action selector="blg_prevDay:" destination="LED1" id="LEa4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next day" id="LEDNX">
+                            <connections>
+                                <action selector="blg_nextDay:" destination="LED1" id="LEa5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blgScrollView" destination="LEDS" id="LEo1"/>
+                        <outlet property="blgHeaderDecor" destination="LEDH" id="LEo2"/>
+                        <outlet property="blgDayLabel" destination="LEDD" id="LEo3"/>
+                        <outlet property="blgEnergyLabel" destination="LEDE" id="LEo4"/>
+                        <outlet property="blgEnergyTargetLabel" destination="LEDT" id="LEo5"/>
+                        <outlet property="blgBalanceLabel" destination="LEDB" id="LEo6"/>
+                        <outlet property="blgProteinIcon" destination="LEDIP" id="LEo7"/>
+                        <outlet property="blgCarbsIcon" destination="LEDIC" id="LEo8"/>
+                        <outlet property="blgFatIcon" destination="LEDIF" id="LEo9"/>
+                        <outlet property="blgProteinLabel" destination="LEDLP" id="LEo10"/>
+                        <outlet property="blgCarbsLabel" destination="LEDLC" id="LEo11"/>
+                        <outlet property="blgFatLabel" destination="LEDLF" id="LEo12"/>
+                        <outlet property="blgTableView" destination="LEDTV" id="LEo13"/>
+                        <outlet property="blgLookupButton" destination="LEDB1" id="LEo14"/>
+                        <outlet property="blgScanButton" destination="LEDB2" id="LEo15"/>
+                        <outlet property="blgStatementButton" destination="LEDB3" id="LEo16"/>
+                        <outlet property="blgEmptyBoard" destination="LEDEMP" id="LEo17"/>
+                        <outlet property="blgOverLabel" destination="LEDO" id="LEo18"/>
+                        <outlet property="blgTableHeight" destination="LEt1" id="LEo19"/>
+                        <segue destination="LUK1" kind="show" identifier="blg_showLookup" id="LEg1"/>
+                        <segue destination="SCN1" kind="show" identifier="blg_showScan" id="LEg2"/>
+                        <segue destination="STM1" kind="show" identifier="blg_showStatement" id="LEg3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="0"/>
+        </scene>
+        <scene sceneID="sSTM">
+            <objects>
+                <viewController storyboardIdentifier="BLGStatementViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="STM1" customClass="BLGStatementViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STMV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="STMK">
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_TwistHero" translatesAutoresizingMaskIntoConstraints="NO" id="STMH">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="STh1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Month" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STMM"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Day" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STMD"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="STMB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="STb1"/>
+                                        </constraints>
+                                        <state key="normal" title="Export CSV"/>
+                                        <connections>
+                                            <action selector="blg_export:" destination="STM1" eventType="touchUpInside" id="STa1"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" translatesAutoresizingMaskIntoConstraints="NO" id="STMT">
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BLGStatementLineCell" id="STMTC" customClass="BLGEntryCell" customModule="BiteLedger" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="382" height="76"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="STMTW"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STME" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="STe1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="STMA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="STMK" firstAttribute="top" secondItem="STMA" secondAttribute="top" constant="8" id="STc1"/>
+                            <constraint firstItem="STMK" firstAttribute="leading" secondItem="STMA" secondAttribute="leading" constant="16" id="STc2"/>
+                            <constraint firstItem="STMK" firstAttribute="trailing" secondItem="STMA" secondAttribute="trailing" constant="-16" id="STc3"/>
+                            <constraint firstItem="STMK" firstAttribute="bottom" secondItem="STMA" secondAttribute="bottom" constant="-8" id="STc4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statement" id="STMN">
+                        <barButtonItem key="leftBarButtonItem" title="Prev" id="STMP">
+                            <connections>
+                                <action selector="blg_prevDay:" destination="STM1" id="STa2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next day" id="STMNX">
+                            <connections>
+                                <action selector="blg_nextDay:" destination="STM1" id="STa3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blgMonthLabel" destination="STMM" id="STo1"/>
+                        <outlet property="blgDayLabel" destination="STMD" id="STo2"/>
+                        <outlet property="blgTableView" destination="STMT" id="STo3"/>
+                        <outlet property="blgExportButton" destination="STMB" id="STo4"/>
+                        <outlet property="blgEmptyBoard" destination="STME" id="STo5"/>
+                        <outlet property="blgHero" destination="STMH" id="STo6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="0"/>
+        </scene>
+        <scene sceneID="sLUK">
+            <objects>
+                <viewController storyboardIdentifier="BLGLookupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUK1" customClass="BLGLookupViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LUKV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LUKS">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LUKI"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" translatesAutoresizingMaskIntoConstraints="NO" id="LUKT">
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BLGProductCell" id="LUKTC" customClass="BLGProductCell" customModule="BiteLedger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LUKTW"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUKE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="LUe1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LUKA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="LUKS" firstAttribute="top" secondItem="LUKA" secondAttribute="top" id="LUc1"/>
+                            <constraint firstItem="LUKS" firstAttribute="leading" secondItem="LUKA" secondAttribute="leading" id="LUc2"/>
+                            <constraint firstItem="LUKS" firstAttribute="trailing" secondItem="LUKA" secondAttribute="trailing" id="LUc3"/>
+                            <constraint firstItem="LUKI" firstAttribute="centerX" secondItem="LUKV" secondAttribute="centerX" id="LUc4"/>
+                            <constraint firstItem="LUKI" firstAttribute="top" secondItem="LUKS" secondAttribute="bottom" constant="8" id="LUc5"/>
+                            <constraint firstItem="LUKT" firstAttribute="top" secondItem="LUKS" secondAttribute="bottom" id="LUc6"/>
+                            <constraint firstItem="LUKT" firstAttribute="leading" secondItem="LUKA" secondAttribute="leading" id="LUc7"/>
+                            <constraint firstItem="LUKT" firstAttribute="trailing" secondItem="LUKA" secondAttribute="trailing" id="LUc8"/>
+                            <constraint firstItem="LUKT" firstAttribute="bottom" secondItem="LUKA" secondAttribute="bottom" id="LUc9"/>
+                            <constraint firstItem="LUKE" firstAttribute="centerX" secondItem="LUKV" secondAttribute="centerX" id="LUc10"/>
+                            <constraint firstItem="LUKE" firstAttribute="centerY" secondItem="LUKV" secondAttribute="centerY" id="LUc11"/>
+                            <constraint firstItem="LUKE" firstAttribute="leading" secondItem="LUKA" secondAttribute="leading" constant="16" id="LUc12"/>
+                            <constraint firstItem="LUKE" firstAttribute="trailing" secondItem="LUKA" secondAttribute="trailing" constant="-16" id="LUc13"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lookup" id="LUKN"/>
+                    <connections>
+                        <outlet property="blgSearchBar" destination="LUKS" id="LUo1"/>
+                        <outlet property="blgTableView" destination="LUKT" id="LUo2"/>
+                        <outlet property="blgEmptyBoard" destination="LUKE" id="LUo3"/>
+                        <outlet property="blgSpinner" destination="LUKI" id="LUo4"/>
+                        <segue destination="PRD1" kind="show" identifier="blg_showProduct" id="LUg1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="0"/>
+        </scene>
+        <scene sceneID="sSCN">
+            <objects>
+                <viewController storyboardIdentifier="BLGScanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SCN1" customClass="BLGScanViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SCNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCNP">
+                                <color key="backgroundColor" name="blg_ink"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCNO">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SCNK">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Align a barcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="SCNL"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" placeholder="Type a barcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCNF">
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="SCf1"/>
+                                        </constraints>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="SCNB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="SCb1"/>
+                                        </constraints>
+                                        <state key="normal" title="Post code"/>
+                                        <connections>
+                                            <action selector="blg_lookup:" destination="SCN1" eventType="touchUpInside" id="SCa1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="SCNS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="SCb2"/>
+                                        </constraints>
+                                        <state key="normal" title="Open Settings"/>
+                                        <connections>
+                                            <action selector="blg_openSettingsTapped:" destination="SCN1" eventType="touchUpInside" id="SCa2"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SCNAMP"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCNE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="SCe1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SCNA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="SCNP" firstAttribute="top" secondItem="SCNA" secondAttribute="top" id="SCc1"/>
+                            <constraint firstItem="SCNP" firstAttribute="leading" secondItem="SCNV" secondAttribute="leading" id="SCc2"/>
+                            <constraint firstItem="SCNP" firstAttribute="trailing" secondItem="SCNV" secondAttribute="trailing" id="SCc3"/>
+                            <constraint firstItem="SCNP" firstAttribute="height" secondItem="SCNV" secondAttribute="height" multiplier="0.38" id="SCc4"/>
+                            <constraint firstItem="SCNO" firstAttribute="top" secondItem="SCNP" secondAttribute="top" id="SCc5"/>
+                            <constraint firstItem="SCNO" firstAttribute="leading" secondItem="SCNP" secondAttribute="leading" id="SCc6"/>
+                            <constraint firstItem="SCNO" firstAttribute="trailing" secondItem="SCNP" secondAttribute="trailing" id="SCc7"/>
+                            <constraint firstItem="SCNO" firstAttribute="bottom" secondItem="SCNP" secondAttribute="bottom" id="SCc8"/>
+                            <constraint firstItem="SCNK" firstAttribute="top" secondItem="SCNP" secondAttribute="bottom" constant="12" id="SCc9"/>
+                            <constraint firstItem="SCNK" firstAttribute="leading" secondItem="SCNA" secondAttribute="leading" constant="16" id="SCc10"/>
+                            <constraint firstItem="SCNK" firstAttribute="trailing" secondItem="SCNA" secondAttribute="trailing" constant="-16" id="SCc11"/>
+                            <constraint firstItem="SCNK" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="SCNA" secondAttribute="bottom" constant="-8" id="SCc12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="SCNN"/>
+                    <connections>
+                        <outlet property="blgPreviewHost" destination="SCNP" id="SCo1"/>
+                        <outlet property="blgOverlayHost" destination="SCNO" id="SCo2"/>
+                        <outlet property="blgManualField" destination="SCNF" id="SCo3"/>
+                        <outlet property="blgLookupButton" destination="SCNB" id="SCo4"/>
+                        <outlet property="blgStatusLabel" destination="SCNL" id="SCo5"/>
+                        <outlet property="blgPermissionBoard" destination="SCNE" id="SCo6"/>
+                        <outlet property="blgSampleStack" destination="SCNAMP" id="SCo7"/>
+                        <outlet property="blgSettingsButton" destination="SCNS" id="SCo8"/>
+                        <segue destination="PRD1" kind="show" identifier="blg_showProduct" id="SCg1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCNF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2700" y="0"/>
+        </scene>
+        <scene sceneID="sPRD">
+            <objects>
+                <viewController storyboardIdentifier="BLGProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PRD1" customClass="BLGProductViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRDV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRDS">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PRDK">
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="blg_CardBackdrop" translatesAutoresizingMaskIntoConstraints="NO" id="PRDB">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="PRh1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_ProductPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="PRDT">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="PRh2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="blg_SuccessMark" translatesAutoresizingMaskIntoConstraints="NO" id="PRDX">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="PRh3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="PRDN"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDR"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Energy unknown" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="PRDE"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="kcal" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDK1"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="P" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDP"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="C" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDC"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="F" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDF"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholder="Grams" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PRDG">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="PRg1"/>
+                                                </constraints>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="live kcal" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDL1"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="live P" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDL2"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="live C" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDL3"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="live F" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRDL4"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="PRDA">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="PRa1"/>
+                                                </constraints>
+                                                <state key="normal" title="Assign"/>
+                                                <connections>
+                                                    <action selector="blg_assign:" destination="PRD1" eventType="touchUpInside" id="PRact1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="PRDW">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="PRa2"/>
+                                                </constraints>
+                                                <state key="normal" title="Wish"/>
+                                                <connections>
+                                                    <action selector="blg_wish:" destination="PRD1" eventType="touchUpInside" id="PRact2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PRDK" firstAttribute="leading" secondItem="PRDS" secondAttribute="leading" constant="16" id="PRs1"/>
+                                    <constraint firstItem="PRDK" firstAttribute="trailing" secondItem="PRDS" secondAttribute="trailing" constant="-16" id="PRs2"/>
+                                    <constraint firstItem="PRDK" firstAttribute="top" secondItem="PRDS" secondAttribute="top" constant="8" id="PRs3"/>
+                                    <constraint firstItem="PRDK" firstAttribute="bottom" secondItem="PRDS" secondAttribute="bottom" constant="-16" id="PRs4"/>
+                                    <constraint firstItem="PRDK" firstAttribute="width" secondItem="PRDS" secondAttribute="width" constant="-32" id="PRs5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PRDAA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="PRDS" firstAttribute="top" secondItem="PRDAA" secondAttribute="top" id="PRc1"/>
+                            <constraint firstItem="PRDS" firstAttribute="leading" secondItem="PRDAA" secondAttribute="leading" id="PRc2"/>
+                            <constraint firstItem="PRDS" firstAttribute="trailing" secondItem="PRDAA" secondAttribute="trailing" id="PRc3"/>
+                            <constraint firstItem="PRDS" firstAttribute="bottom" secondItem="PRDAA" secondAttribute="bottom" id="PRc4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Folio" id="PRDNIV"/>
+                    <connections>
+                        <outlet property="blgScrollView" destination="PRDS" id="PRo1"/>
+                        <outlet property="blgBackdrop" destination="PRDB" id="PRo2"/>
+                        <outlet property="blgThumbView" destination="PRDT" id="PRo3"/>
+                        <outlet property="blgNameLabel" destination="PRDN" id="PRo4"/>
+                        <outlet property="blgBrandLabel" destination="PRDR" id="PRo5"/>
+                        <outlet property="blgEnergyBanner" destination="PRDE" id="PRo6"/>
+                        <outlet property="blgKcal100Label" destination="PRDK1" id="PRo7"/>
+                        <outlet property="blgProtein100Label" destination="PRDP" id="PRo8"/>
+                        <outlet property="blgCarbs100Label" destination="PRDC" id="PRo9"/>
+                        <outlet property="blgFat100Label" destination="PRDF" id="PRo10"/>
+                        <outlet property="blgGramsField" destination="PRDG" id="PRo11"/>
+                        <outlet property="blgLiveKcalLabel" destination="PRDL1" id="PRo12"/>
+                        <outlet property="blgLiveProteinLabel" destination="PRDL2" id="PRo13"/>
+                        <outlet property="blgLiveCarbsLabel" destination="PRDL3" id="PRo14"/>
+                        <outlet property="blgLiveFatLabel" destination="PRDL4" id="PRo15"/>
+                        <outlet property="blgAssignButton" destination="PRDA" id="PRo16"/>
+                        <outlet property="blgWishButton" destination="PRDW" id="PRo17"/>
+                        <outlet property="blgSuccessMark" destination="PRDX" id="PRo18"/>
+                        <segue destination="ASN1" kind="show" identifier="blg_showAssign" id="PRseg1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRDF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200" y="0"/>
+        </scene>
+        <scene sceneID="sASN">
+            <objects>
+                <viewController storyboardIdentifier="BLGAssignViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ASN1" customClass="BLGAssignViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ASNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASNS">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ASNK">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ASNSL"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ASNW">
+                                                <segments>
+                                                    <segment title="Eaten today"/>
+                                                    <segment title="Plan ahead"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="blg_whenChanged:" destination="ASN1" eventType="valueChanged" id="ASa1"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="ASND">
+                                                <connections>
+                                                    <action selector="blg_dateChanged:" destination="ASN1" eventType="valueChanged" id="ASa2"/>
+                                                </connections>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Note" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="ASNN"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="ASNB">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ASb1"/>
+                                                </constraints>
+                                                <state key="normal" title="Post"/>
+                                                <connections>
+                                                    <action selector="blg_confirm:" destination="ASN1" eventType="touchUpInside" id="ASa3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ASNK" firstAttribute="leading" secondItem="ASNS" secondAttribute="leading" constant="16" id="ASs1"/>
+                                    <constraint firstItem="ASNK" firstAttribute="trailing" secondItem="ASNS" secondAttribute="trailing" constant="-16" id="ASs2"/>
+                                    <constraint firstItem="ASNK" firstAttribute="top" secondItem="ASNS" secondAttribute="top" constant="16" id="ASs3"/>
+                                    <constraint firstItem="ASNK" firstAttribute="bottom" secondItem="ASNS" secondAttribute="bottom" constant="-16" id="ASs4"/>
+                                    <constraint firstItem="ASNK" firstAttribute="width" secondItem="ASNS" secondAttribute="width" constant="-32" id="ASs5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ASNA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="ASNS" firstAttribute="top" secondItem="ASNA" secondAttribute="top" id="ASc1"/>
+                            <constraint firstItem="ASNS" firstAttribute="leading" secondItem="ASNA" secondAttribute="leading" id="ASc2"/>
+                            <constraint firstItem="ASNS" firstAttribute="trailing" secondItem="ASNA" secondAttribute="trailing" id="ASc3"/>
+                            <constraint firstItem="ASNS" firstAttribute="bottom" secondItem="ASNA" secondAttribute="bottom" id="ASc4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post entry" id="ASNNIV"/>
+                    <connections>
+                        <outlet property="blgScrollView" destination="ASNS" id="ASo1"/>
+                        <outlet property="blgSlotStack" destination="ASNSL" id="ASo2"/>
+                        <outlet property="blgWhenControl" destination="ASNW" id="ASo3"/>
+                        <outlet property="blgDatePicker" destination="ASND" id="ASo4"/>
+                        <outlet property="blgNoteLabel" destination="ASNN" id="ASo5"/>
+                        <outlet property="blgConfirmButton" destination="ASNB" id="ASo6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3700" y="0"/>
+        </scene>
+        <scene sceneID="sPLN">
+            <objects>
+                <viewController storyboardIdentifier="BLGPlannerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PLN1" customClass="BLGPlannerViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PLNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Horizon" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLNH"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" translatesAutoresizingMaskIntoConstraints="NO" id="PLNT">
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BLGPlanCell" id="PLNTC" customClass="BLGEntryCell" customModule="BiteLedger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PLNTW"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLNE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="PLe1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PLNA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="PLNH" firstAttribute="top" secondItem="PLNA" secondAttribute="top" constant="8" id="PLc1"/>
+                            <constraint firstItem="PLNH" firstAttribute="leading" secondItem="PLNA" secondAttribute="leading" constant="16" id="PLc2"/>
+                            <constraint firstItem="PLNH" firstAttribute="trailing" secondItem="PLNA" secondAttribute="trailing" constant="-16" id="PLc3"/>
+                            <constraint firstItem="PLNT" firstAttribute="top" secondItem="PLNH" secondAttribute="bottom" constant="8" id="PLc4"/>
+                            <constraint firstItem="PLNT" firstAttribute="leading" secondItem="PLNA" secondAttribute="leading" id="PLc5"/>
+                            <constraint firstItem="PLNT" firstAttribute="trailing" secondItem="PLNA" secondAttribute="trailing" id="PLc6"/>
+                            <constraint firstItem="PLNT" firstAttribute="bottom" secondItem="PLNA" secondAttribute="bottom" id="PLc7"/>
+                            <constraint firstItem="PLNE" firstAttribute="centerX" secondItem="PLNV" secondAttribute="centerX" id="PLc8"/>
+                            <constraint firstItem="PLNE" firstAttribute="centerY" secondItem="PLNV" secondAttribute="centerY" id="PLc9"/>
+                            <constraint firstItem="PLNE" firstAttribute="leading" secondItem="PLNA" secondAttribute="leading" constant="16" id="PLc10"/>
+                            <constraint firstItem="PLNE" firstAttribute="trailing" secondItem="PLNA" secondAttribute="trailing" constant="-16" id="PLc11"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Planner" id="PLNN"/>
+                    <connections>
+                        <outlet property="blgHorizonLabel" destination="PLNH" id="PLo1"/>
+                        <outlet property="blgTableView" destination="PLNT" id="PLo2"/>
+                        <outlet property="blgEmptyBoard" destination="PLNE" id="PLo3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="800"/>
+        </scene>
+        <scene sceneID="sWSH">
+            <objects>
+                <viewController storyboardIdentifier="BLGWishlistViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WSH1" customClass="BLGWishlistViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WSHV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" translatesAutoresizingMaskIntoConstraints="NO" id="WSHT">
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BLGWishCell" id="WSHTC" customClass="BLGProductCell" customModule="BiteLedger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WSHTW"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSHE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="WSe1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WSHA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="WSHT" firstAttribute="top" secondItem="WSHA" secondAttribute="top" id="WSc1"/>
+                            <constraint firstItem="WSHT" firstAttribute="leading" secondItem="WSHA" secondAttribute="leading" id="WSc2"/>
+                            <constraint firstItem="WSHT" firstAttribute="trailing" secondItem="WSHA" secondAttribute="trailing" id="WSc3"/>
+                            <constraint firstItem="WSHT" firstAttribute="bottom" secondItem="WSHA" secondAttribute="bottom" id="WSc4"/>
+                            <constraint firstItem="WSHE" firstAttribute="centerX" secondItem="WSHV" secondAttribute="centerX" id="WSc5"/>
+                            <constraint firstItem="WSHE" firstAttribute="centerY" secondItem="WSHV" secondAttribute="centerY" id="WSc6"/>
+                            <constraint firstItem="WSHE" firstAttribute="leading" secondItem="WSHA" secondAttribute="leading" constant="16" id="WSc7"/>
+                            <constraint firstItem="WSHE" firstAttribute="trailing" secondItem="WSHA" secondAttribute="trailing" constant="-16" id="WSc8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wishlist" id="WSHN"/>
+                    <connections>
+                        <outlet property="blgTableView" destination="WSHT" id="WSo1"/>
+                        <outlet property="blgEmptyBoard" destination="WSHE" id="WSo2"/>
+                        <segue destination="PRD1" kind="show" identifier="blg_showProduct" id="WSg1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="800"/>
+        </scene>
+        <scene sceneID="sGOL">
+            <objects>
+                <viewController storyboardIdentifier="BLGGoalsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GOL1" customClass="BLGGoalsViewController" customModule="BiteLedger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GOLV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOLS">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GOLK">
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholder="Energy kcal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOLF1">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOf1"/>
+                                                </constraints>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholder="Protein" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOLF2">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOf2"/>
+                                                </constraints>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholder="Carbs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOLF3">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOf3"/>
+                                                </constraints>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholder="Fat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOLF4">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOf4"/>
+                                                </constraints>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="GOLB1">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOb1"/>
+                                                </constraints>
+                                                <state key="normal" title="Save targets"/>
+                                                <connections>
+                                                    <action selector="blg_save:" destination="GOL1" eventType="touchUpInside" id="GOa1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="GOLB2">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOb2"/>
+                                                </constraints>
+                                                <state key="normal" title="Re-run onboarding"/>
+                                                <connections>
+                                                    <action selector="blg_onboard:" destination="GOL1" eventType="touchUpInside" id="GOa2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="GOLB3">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOb3"/>
+                                                </constraints>
+                                                <state key="normal" title="Reset all data"/>
+                                                <connections>
+                                                    <action selector="blg_reset:" destination="GOL1" eventType="touchUpInside" id="GOa3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="GOLB4">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GOb4"/>
+                                                </constraints>
+                                                <state key="normal" title="Contact BiteLedger"/>
+                                                <connections>
+                                                    <action selector="blg_contact:" destination="GOL1" eventType="touchUpInside" id="GOa4"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="GOLN"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GOLK" firstAttribute="leading" secondItem="GOLS" secondAttribute="leading" constant="16" id="GOs1"/>
+                                    <constraint firstItem="GOLK" firstAttribute="trailing" secondItem="GOLS" secondAttribute="trailing" constant="-16" id="GOs2"/>
+                                    <constraint firstItem="GOLK" firstAttribute="top" secondItem="GOLS" secondAttribute="top" constant="16" id="GOs3"/>
+                                    <constraint firstItem="GOLK" firstAttribute="bottom" secondItem="GOLS" secondAttribute="bottom" constant="-16" id="GOs4"/>
+                                    <constraint firstItem="GOLK" firstAttribute="width" secondItem="GOLS" secondAttribute="width" constant="-32" id="GOs5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GOLA"/>
+                        <color key="backgroundColor" name="blg_background"/>
+                        <constraints>
+                            <constraint firstItem="GOLS" firstAttribute="top" secondItem="GOLA" secondAttribute="top" id="GOc1"/>
+                            <constraint firstItem="GOLS" firstAttribute="leading" secondItem="GOLA" secondAttribute="leading" id="GOc2"/>
+                            <constraint firstItem="GOLS" firstAttribute="trailing" secondItem="GOLA" secondAttribute="trailing" id="GOc3"/>
+                            <constraint firstItem="GOLS" firstAttribute="bottom" secondItem="GOLA" secondAttribute="bottom" id="GOc4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Goals" id="GOLNIV"/>
+                    <connections>
+                        <outlet property="blgScrollView" destination="GOLS" id="GOo1"/>
+                        <outlet property="blgKcalField" destination="GOLF1" id="GOo2"/>
+                        <outlet property="blgProteinField" destination="GOLF2" id="GOo3"/>
+                        <outlet property="blgCarbsField" destination="GOLF3" id="GOo4"/>
+                        <outlet property="blgFatField" destination="GOLF4" id="GOo5"/>
+                        <outlet property="blgSaveButton" destination="GOLB1" id="GOo6"/>
+                        <outlet property="blgOnboardButton" destination="GOLB2" id="GOo7"/>
+                        <outlet property="blgResetButton" destination="GOLB3" id="GOo8"/>
+                        <outlet property="blgContactButton" destination="GOLB4" id="GOo9"/>
+                        <outlet property="blgNoticeLabel" destination="GOLN" id="GOo10"/>
+                        <segue destination="ONB1" kind="presentation" identifier="blg_presentOnboarding" modalPresentationStyle="fullScreen" id="GOg1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="800"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LUg1"/>
+        <segue reference="LCg2"/>
+        <segue reference="ONg1"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="blg_Splash" width="1290" height="2796"/>
+        <image name="blg_Onboarding1" width="1024" height="1536"/>
+        <image name="blg_HeaderDecor" width="1200" height="600"/>
+        <image name="blg_MacroProtein" width="512" height="512"/>
+        <image name="blg_MacroCarbs" width="512" height="512"/>
+        <image name="blg_MacroFat" width="512" height="512"/>
+        <image name="blg_TwistHero" width="1024" height="1024"/>
+        <image name="blg_CardBackdrop" width="1200" height="800"/>
+        <image name="blg_ProductPlaceholder" width="600" height="600"/>
+        <image name="blg_SuccessMark" width="512" height="512"/>
+        <namedColor name="blg_background">
+            <color red="0.96078431372549022" green="0.94117647058823528" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blg_surface">
+            <color red="1" green="0.99215686274509807" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blg_ink">
+            <color red="0.24313725490196078" green="0.18431372549019609" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blg_accent">
+            <color red="0.75294117647058822" green="0.22352941176470589" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blg_muted">
+            <color red="0.62745098039215685" green="0.54509803921568623" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

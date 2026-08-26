@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22900" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LS1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22900"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="sLS">
+            <objects>
+                <viewController id="LS1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="blg_Splash" translatesAutoresizingMaskIntoConstraints="NO" id="LSI"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LSA"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.94117647058823528" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LSI" firstAttribute="top" secondItem="LSV" secondAttribute="top" id="LSc1"/>
+                            <constraint firstItem="LSI" firstAttribute="leading" secondItem="LSV" secondAttribute="leading" id="LSc2"/>
+                            <constraint firstItem="LSI" firstAttribute="trailing" secondItem="LSV" secondAttribute="trailing" id="LSc3"/>
+                            <constraint firstItem="LSI" firstAttribute="bottom" secondItem="LSV" secondAttribute="bottom" id="LSc4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blg_Splash" width="1290" height="2796"/>
+    </resources>
+</document>

@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		605BD6D63EA82B824CEC4A66 /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854321221CB56D88ECF3A69B /* ContactWebSheet.swift */; };
+		778CC9BDAD1AF6F3FDCC9216 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717C74DD26A691DF2B772B0 /* APIConfig.swift */; };
+		029C882B2A907A3E20DCDA30 /* BLGStatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA8701C2E2F72E63C7D60 /* BLGStatementViewController.swift */; };
+		02EBD26D66C82F5A876FC8FE /* BLGGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82528C6B4C2F4F20F6C1C898 /* BLGGoalsViewModel.swift */; };
+		0880F73772749E625C013AF7 /* BLGLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F18EAD30857202A1A1A0C74 /* BLGLaunchViewController.swift */; };
+		0C7D4283E30FEF392FEF4DFD /* BLGWishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02961A9E612B164ACA2B08BB /* BLGWishlistViewModel.swift */; };
+		0D39D96CF9E35336F3C9A7D7 /* BLGGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1238F30C3B4F98E15CFECF38 /* BLGGoalsViewController.swift */; };
+		10E8A255F32260BEB20E1D16 /* BLGEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2293CA8D8FCCA27A4070FDF /* BLGEntryCell.swift */; };
+		1DD06931D3419BB9F1F68EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278BD0B6002FD5BABFFDE6A1 /* Assets.xcassets */; };
+		2321B7B9D3329F4510CEAF10 /* BLGPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D0AD98D778B8C481EF8E44 /* BLGPalette.swift */; };
+		246172F46127B8EE7E2E4E96 /* BLGPlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1F6110FB146F9EE4800BF /* BLGPlannerViewModel.swift */; };
+		26D70AEF513876CFDCCF6F66 /* BLGServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885069BE35C41313002C2C4 /* BLGServices.swift */; };
+		2810304E7CB11B754BB2FDCC /* BLGBarcodeNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D5D5D9200515FE6DABBCA2 /* BLGBarcodeNormalizer.swift */; };
+		2BD4F8D2541291904769FA14 /* BLGScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF888070A76137035F4174D1 /* BLGScanViewController.swift */; };
+		32205C6CFA966E96C57FAE01 /* BLGProductArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C9FD079D646BED9090DE6 /* BLGProductArt.swift */; };
+		3C39B3785A7F4E76BDFD3144 /* BLGDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F60E944E717F5F1F990560 /* BLGDrawerItem.swift */; };
+		3C8E426A854E63E2A3E15A52 /* BLGPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91A96D1FF46EFB7432C3D5 /* BLGPaperView.swift */; };
+		3D3817C9BF38FF0C7A7BC99D /* BLGDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D352FD10FC4AE4E86C8EEB /* BLGDayViewModel.swift */; };
+		431ED742F06E489A45DDEF9D /* BLGCSVExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197D18BAF2BFC3B77F62169 /* BLGCSVExport.swift */; };
+		58D5E06716737EB278D7EF89 /* BLGAssignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AFAE1AA645FA29E4BB4A5 /* BLGAssignViewController.swift */; };
+		66A00931E9E3EF06CC367EAD /* BLGKeyboardWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2A35A1A3E824E3550AE75C /* BLGKeyboardWatch.swift */; };
+		6BC67CEEFAF02B015331C8D8 /* BLGModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319E61C73A7EB5B74DD52FDD /* BLGModels.swift */; };
+		6E969E6FA9BA5362A4BCE430 /* BLGLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B71BE98CA7572016348C5 /* BLGLookupViewModel.swift */; };
+		79F4B417056035D5F3D3EE62 /* BLGCaptureRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D658377B38EF75B223363 /* BLGCaptureRuntime.swift */; };
+		7AE4DC2A667A049A1AD963B3 /* BLGLedgerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCB45C846F9667E7E279A6 /* BLGLedgerStore.swift */; };
+		7F3DCAD4351A874520F9AB02 /* BLGOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AC8348164CD3A4012A519 /* BLGOnboardingViewModel.swift */; };
+		8313B8D7D90F98F5F1DE4CB9 /* BLGEmptyBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63A96CA7AFED078E66767C /* BLGEmptyBoardView.swift */; };
+		87321E1A9100C6484E198C09 /* BLGScanLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E107BC806AC4D258A941B036 /* BLGScanLineView.swift */; };
+		8B3340CC47709A68DF5DC814 /* BLGPlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791648A9B5F3D096D047C990 /* BLGPlannerViewController.swift */; };
+		8CC3BFDF262296A76C07FA3D /* BLGHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F701CC0BEF0BB952585C0E /* BLGHaptics.swift */; };
+		9492389F53B81B8D0CD08D7A /* BLGLedgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EBF0FD23FCB4FA3D64A79 /* BLGLedgerTests.swift */; };
+		985CC1BA2ACA41FB8F6F78D7 /* BLGOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787C05BCFC907B7A01FEEAB /* BLGOnboardingViewController.swift */; };
+		9876155CAFCBE8B4E6FA9E6D /* BLGSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */; };
+		9F5A13AC8619F622B1ECFB7D /* BLGLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBD65994D73272A8460FCE /* BLGLookupViewController.swift */; };
+		A3C2B6D3D8721FB0FA03A335 /* BLGDrawerContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC2EF40A69408BCFE7BE6E8 /* BLGDrawerContainerController.swift */; };
+		A6407CFC730A42FEC79EF705 /* BLGProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC689BCAF3922DC1C0FCEF /* BLGProductViewController.swift */; };
+		A7C4AF48BB554B17EA4A0FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FBEDE6C26EBA1445787926 /* Main.storyboard */; };
+		A9AAD595DD124D7E5D54060B /* BLGAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB4332ECA037CFB322B3BA /* BLGAppDelegate.swift */; };
+		A9CA9237F65B5BE97DA30E39 /* BLGCatalogDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E266CA64BFB816AFDB203AE /* BLGCatalogDTO.swift */; };
+		AE72248ED25BC2015C6E2412 /* BLGScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48FB8275321884C28866A94 /* BLGScanViewModel.swift */; };
+		BD483C7FFE4D8E1ECAF4F377 /* BLGAssignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52445358283E39A7EE1DA6 /* BLGAssignViewModel.swift */; };
+		BF49FC95151F8E82DC118D58 /* BLGWishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6673FB875C24ACA3B38E2D6 /* BLGWishlistViewController.swift */; };
+		C1FA392DE2C6375543A3D38D /* BLGShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86951A57678C640DCA1C45 /* BLGShelf.swift */; };
+		C34B9317DAB250BC1DDE3560 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4968370EBAC0A40D5DDED8D /* libsqlite3.tbd */; };
+		C52C35B8D4EFC6F6D472964B /* BLGDayKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040550F1593E8E8EA161310 /* BLGDayKey.swift */; };
+		C5FC4EDACB406746409138DA /* BLGAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B50799890545B067039D5DB /* BLGAccountService.swift */; };
+		C6FF0F6B2359AB56941AB469 /* BLGProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61042D8E5B377747F5EFAD3 /* BLGProductCell.swift */; };
+		C823F7C0BB88A92DDF1DE60B /* BLGDoubleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBBB918D536A526BAFA842 /* BLGDoubleEntry.swift */; };
+		D0F68A139CD2F7EA714CDBEE /* BLGAssignPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684C6EDDAC54388851E4475 /* BLGAssignPolicy.swift */; };
+		D12B607880AA0F85C3559534 /* BLGLedgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0542380D7859CF52637862C /* BLGLedgerViewController.swift */; };
+		D887715A04F8DD80B267FB86 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DE36954353BC781C34B199BF /* PrivacyInfo.xcprivacy */; };
+		E494A076ACB58047584FEBE7 /* BLGStatementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA9AC35D6B54F82CA6E6FF /* BLGStatementViewModel.swift */; };
+		E8A805083B7A37E25681E86A /* BLGCatalogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */; };
+		E9010C08B63C7D791C3BF734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F8B70E2EE490424AC0EBB5 /* LaunchScreen.storyboard */; };
+		EBD9A11FFAD3DC0C741B225A /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = B4E0844075CBA878F40D4BEF /* Collections */; };
+		F7480E221459CAAE372FB9C3 /* BLGPortionMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE328010B11778573695959F /* BLGPortionMath.swift */; };
+		F83329F6253213F5B61CD7F0 /* BLGProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC225AF98E911FCFF60C0C9A /* BLGProductViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2AAAD42FC3631B615916564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC1D1410C315E04EF4A48B60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F64B653E22137C54E83ADE;
+			remoteInfo = BiteLedger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		854321221CB56D88ECF3A69B /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
+		0717C74DD26A691DF2B772B0 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCatalogClient.swift; sourceTree = "<group>"; };
+		02961A9E612B164ACA2B08BB /* BLGWishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGWishlistViewModel.swift; sourceTree = "<group>"; };
+		0832F68371BE2A090129B387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGSceneDelegate.swift; sourceTree = "<group>"; };
+		1238F30C3B4F98E15CFECF38 /* BLGGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGGoalsViewController.swift; sourceTree = "<group>"; };
+		1431FF476741BBCFFAFC1AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16EBBB918D536A526BAFA842 /* BLGDoubleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDoubleEntry.swift; sourceTree = "<group>"; };
+		19D352FD10FC4AE4E86C8EEB /* BLGDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDayViewModel.swift; sourceTree = "<group>"; };
+		1DFB4332ECA037CFB322B3BA /* BLGAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAppDelegate.swift; sourceTree = "<group>"; };
+		278BD0B6002FD5BABFFDE6A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F18EAD30857202A1A1A0C74 /* BLGLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLaunchViewController.swift; sourceTree = "<group>"; };
+		3197D18BAF2BFC3B77F62169 /* BLGCSVExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCSVExport.swift; sourceTree = "<group>"; };
+		319E61C73A7EB5B74DD52FDD /* BLGModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGModels.swift; sourceTree = "<group>"; };
+		3A18E15D2FACB60D2660FAC4 /* BiteLedger.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BiteLedger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A15AA4B68C1D3621358C3D /* BiteLedgerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BiteLedgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E266CA64BFB816AFDB203AE /* BLGCatalogDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCatalogDTO.swift; sourceTree = "<group>"; };
+		5B50799890545B067039D5DB /* BLGAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAccountService.swift; sourceTree = "<group>"; };
+		662AC8348164CD3A4012A519 /* BLGOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGOnboardingViewModel.swift; sourceTree = "<group>"; };
+		6A91A96D1FF46EFB7432C3D5 /* BLGPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGPaperView.swift; sourceTree = "<group>"; };
+		6F86951A57678C640DCA1C45 /* BLGShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGShelf.swift; sourceTree = "<group>"; };
+		706AFAE1AA645FA29E4BB4A5 /* BLGAssignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAssignViewController.swift; sourceTree = "<group>"; };
+		78F60E944E717F5F1F990560 /* BLGDrawerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDrawerItem.swift; sourceTree = "<group>"; };
+		791648A9B5F3D096D047C990 /* BLGPlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGPlannerViewController.swift; sourceTree = "<group>"; };
+		7AD1F6110FB146F9EE4800BF /* BLGPlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGPlannerViewModel.swift; sourceTree = "<group>"; };
+		811D658377B38EF75B223363 /* BLGCaptureRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCaptureRuntime.swift; sourceTree = "<group>"; };
+		82528C6B4C2F4F20F6C1C898 /* BLGGoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGGoalsViewModel.swift; sourceTree = "<group>"; };
+		831AA8701C2E2F72E63C7D60 /* BLGStatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGStatementViewController.swift; sourceTree = "<group>"; };
+		8C52445358283E39A7EE1DA6 /* BLGAssignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAssignViewModel.swift; sourceTree = "<group>"; };
+		9040550F1593E8E8EA161310 /* BLGDayKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDayKey.swift; sourceTree = "<group>"; };
+		91D0AD98D778B8C481EF8E44 /* BLGPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGPalette.swift; sourceTree = "<group>"; };
+		A2293CA8D8FCCA27A4070FDF /* BLGEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGEntryCell.swift; sourceTree = "<group>"; };
+		A4968370EBAC0A40D5DDED8D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A52C9FD079D646BED9090DE6 /* BLGProductArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductArt.swift; sourceTree = "<group>"; };
+		A7D5D5D9200515FE6DABBCA2 /* BLGBarcodeNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGBarcodeNormalizer.swift; sourceTree = "<group>"; };
+		A9EC689BCAF3922DC1C0FCEF /* BLGProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductViewController.swift; sourceTree = "<group>"; };
+		AC63A96CA7AFED078E66767C /* BLGEmptyBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGEmptyBoardView.swift; sourceTree = "<group>"; };
+		AE2A35A1A3E824E3550AE75C /* BLGKeyboardWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGKeyboardWatch.swift; sourceTree = "<group>"; };
+		B787C05BCFC907B7A01FEEAB /* BLGOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGOnboardingViewController.swift; sourceTree = "<group>"; };
+		BAEA9AC35D6B54F82CA6E6FF /* BLGStatementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGStatementViewModel.swift; sourceTree = "<group>"; };
+		C48FB8275321884C28866A94 /* BLGScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGScanViewModel.swift; sourceTree = "<group>"; };
+		C61042D8E5B377747F5EFAD3 /* BLGProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductCell.swift; sourceTree = "<group>"; };
+		C684C6EDDAC54388851E4475 /* BLGAssignPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAssignPolicy.swift; sourceTree = "<group>"; };
+		CDC2EF40A69408BCFE7BE6E8 /* BLGDrawerContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDrawerContainerController.swift; sourceTree = "<group>"; };
+		D885069BE35C41313002C2C4 /* BLGServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGServices.swift; sourceTree = "<group>"; };
+		DC225AF98E911FCFF60C0C9A /* BLGProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductViewModel.swift; sourceTree = "<group>"; };
+		DE36954353BC781C34B199BF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		E04EBF0FD23FCB4FA3D64A79 /* BLGLedgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLedgerTests.swift; sourceTree = "<group>"; };
+		E107BC806AC4D258A941B036 /* BLGScanLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGScanLineView.swift; sourceTree = "<group>"; };
+		E3CBD65994D73272A8460FCE /* BLGLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLookupViewController.swift; sourceTree = "<group>"; };
+		E6673FB875C24ACA3B38E2D6 /* BLGWishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGWishlistViewController.swift; sourceTree = "<group>"; };
+		F0542380D7859CF52637862C /* BLGLedgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLedgerViewController.swift; sourceTree = "<group>"; };
+		F54B71BE98CA7572016348C5 /* BLGLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLookupViewModel.swift; sourceTree = "<group>"; };
+		F5F701CC0BEF0BB952585C0E /* BLGHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGHaptics.swift; sourceTree = "<group>"; };
+		F7CCB45C846F9667E7E279A6 /* BLGLedgerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLedgerStore.swift; sourceTree = "<group>"; };
+		FE328010B11778573695959F /* BLGPortionMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGPortionMath.swift; sourceTree = "<group>"; };
+		FF888070A76137035F4174D1 /* BLGScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGScanViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		972DB65EA6FB6186AC3DF34B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C34B9317DAB250BC1DDE3560 /* libsqlite3.tbd in Frameworks */,
+				EBD9A11FFAD3DC0C741B225A /* Collections in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C5F8828444A457BAD8BED34 /* BiteLedger */ = {
+			isa = PBXGroup;
+			children = (
+				278BD0B6002FD5BABFFDE6A1 /* Assets.xcassets */,
+				DE36954353BC781C34B199BF /* PrivacyInfo.xcprivacy */,
+				30EB8F22BB85733507FB989B /* Goals */,
+				89F8B70E2EE490424AC0EBB5 /* LaunchScreen.storyboard */,
+				CE64B22FB553725E2FE431C6 /* Ledger */,
+				F9B97D36889E89F43D911C0E /* Lookup */,
+				27FBEDE6C26EBA1445787926 /* Main.storyboard */,
+				F32144085B8719F164CF192D /* Planner */,
+				F352EDF9FCD894F259DA8AC3 /* Scan */,
+				8571821B60075AFEA8297FB8 /* Shared */,
+				8BD819E3700E032616C19722 /* Wishlist */,
+			);
+			path = BiteLedger;
+			sourceTree = "<group>";
+		};
+		2AE5ED185B6F93DFB172CBE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4968370EBAC0A40D5DDED8D /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30EB8F22BB85733507FB989B /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				1238F30C3B4F98E15CFECF38 /* BLGGoalsViewController.swift */,
+				82528C6B4C2F4F20F6C1C898 /* BLGGoalsViewModel.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		7467967BA8EA860736C79B54 = {
+			isa = PBXGroup;
+			children = (
+				1C5F8828444A457BAD8BED34 /* BiteLedger */,
+				D8153E15F6054D2707A3279A /* BiteLedgerTests */,
+				2AE5ED185B6F93DFB172CBE7 /* Frameworks */,
+				DD241720A56C82369041B092 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8571821B60075AFEA8297FB8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5B50799890545B067039D5DB /* BLGAccountService.swift */,
+				1DFB4332ECA037CFB322B3BA /* BLGAppDelegate.swift */,
+				854321221CB56D88ECF3A69B /* ContactWebSheet.swift */,
+				0717C74DD26A691DF2B772B0 /* APIConfig.swift */,
+				C684C6EDDAC54388851E4475 /* BLGAssignPolicy.swift */,
+				A7D5D5D9200515FE6DABBCA2 /* BLGBarcodeNormalizer.swift */,
+				022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */,
+				4E266CA64BFB816AFDB203AE /* BLGCatalogDTO.swift */,
+				3197D18BAF2BFC3B77F62169 /* BLGCSVExport.swift */,
+				9040550F1593E8E8EA161310 /* BLGDayKey.swift */,
+				16EBBB918D536A526BAFA842 /* BLGDoubleEntry.swift */,
+				CDC2EF40A69408BCFE7BE6E8 /* BLGDrawerContainerController.swift */,
+				78F60E944E717F5F1F990560 /* BLGDrawerItem.swift */,
+				AC63A96CA7AFED078E66767C /* BLGEmptyBoardView.swift */,
+				F5F701CC0BEF0BB952585C0E /* BLGHaptics.swift */,
+				AE2A35A1A3E824E3550AE75C /* BLGKeyboardWatch.swift */,
+				2F18EAD30857202A1A1A0C74 /* BLGLaunchViewController.swift */,
+				F7CCB45C846F9667E7E279A6 /* BLGLedgerStore.swift */,
+				319E61C73A7EB5B74DD52FDD /* BLGModels.swift */,
+				91D0AD98D778B8C481EF8E44 /* BLGPalette.swift */,
+				6A91A96D1FF46EFB7432C3D5 /* BLGPaperView.swift */,
+				FE328010B11778573695959F /* BLGPortionMath.swift */,
+				A52C9FD079D646BED9090DE6 /* BLGProductArt.swift */,
+				0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */,
+				D885069BE35C41313002C2C4 /* BLGServices.swift */,
+				6F86951A57678C640DCA1C45 /* BLGShelf.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8BD819E3700E032616C19722 /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				E6673FB875C24ACA3B38E2D6 /* BLGWishlistViewController.swift */,
+				02961A9E612B164ACA2B08BB /* BLGWishlistViewModel.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		CE64B22FB553725E2FE431C6 /* Ledger */ = {
+			isa = PBXGroup;
+			children = (
+				19D352FD10FC4AE4E86C8EEB /* BLGDayViewModel.swift */,
+				A2293CA8D8FCCA27A4070FDF /* BLGEntryCell.swift */,
+				F0542380D7859CF52637862C /* BLGLedgerViewController.swift */,
+				B787C05BCFC907B7A01FEEAB /* BLGOnboardingViewController.swift */,
+				662AC8348164CD3A4012A519 /* BLGOnboardingViewModel.swift */,
+				831AA8701C2E2F72E63C7D60 /* BLGStatementViewController.swift */,
+				BAEA9AC35D6B54F82CA6E6FF /* BLGStatementViewModel.swift */,
+			);
+			path = Ledger;
+			sourceTree = "<group>";
+		};
+		D8153E15F6054D2707A3279A /* BiteLedgerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E04EBF0FD23FCB4FA3D64A79 /* BLGLedgerTests.swift */,
+			);
+			path = BiteLedgerTests;
+			sourceTree = "<group>";
+		};
+		DD241720A56C82369041B092 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A18E15D2FACB60D2660FAC4 /* BiteLedger.app */,
+				41A15AA4B68C1D3621358C3D /* BiteLedgerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F32144085B8719F164CF192D /* Planner */ = {
+			isa = PBXGroup;
+			children = (
+				791648A9B5F3D096D047C990 /* BLGPlannerViewController.swift */,
+				7AD1F6110FB146F9EE4800BF /* BLGPlannerViewModel.swift */,
+			);
+			path = Planner;
+			sourceTree = "<group>";
+		};
+		F352EDF9FCD894F259DA8AC3 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				811D658377B38EF75B223363 /* BLGCaptureRuntime.swift */,
+				E107BC806AC4D258A941B036 /* BLGScanLineView.swift */,
+				FF888070A76137035F4174D1 /* BLGScanViewController.swift */,
+				C48FB8275321884C28866A94 /* BLGScanViewModel.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		F9B97D36889E89F43D911C0E /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				706AFAE1AA645FA29E4BB4A5 /* BLGAssignViewController.swift */,
+				8C52445358283E39A7EE1DA6 /* BLGAssignViewModel.swift */,
+				E3CBD65994D73272A8460FCE /* BLGLookupViewController.swift */,
+				F54B71BE98CA7572016348C5 /* BLGLookupViewModel.swift */,
+				C61042D8E5B377747F5EFAD3 /* BLGProductCell.swift */,
+				A9EC689BCAF3922DC1C0FCEF /* BLGProductViewController.swift */,
+				DC225AF98E911FCFF60C0C9A /* BLGProductViewModel.swift */,
+			);
+			path = Lookup;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AE4DB1303122EC9CC310EAF /* BiteLedgerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 993FF05C9E4BBF7FD3F33CD4 /* Build configuration list for PBXNativeTarget "BiteLedgerTests" */;
+			buildPhases = (
+				B2D09115F2532401F5B471C7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EFDCCEA2D72A3AF470FB843 /* PBXTargetDependency */,
+			);
+			name = BiteLedgerTests;
+			packageProductDependencies = (
+			);
+			productName = BiteLedgerTests;
+			productReference = 41A15AA4B68C1D3621358C3D /* BiteLedgerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9F64B653E22137C54E83ADE /* BiteLedger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7354152A2932687D111312B7 /* Build configuration list for PBXNativeTarget "BiteLedger" */;
+			buildPhases = (
+				B40E6B360790943031E12871 /* Sources */,
+				DA4685CBF895EB729F557C6A /* Resources */,
+				972DB65EA6FB6186AC3DF34B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiteLedger;
+			packageProductDependencies = (
+				1A0EB16C84DDFB87DD0BEAFD /* Alamofire */,
+				B4E0844075CBA878F40D4BEF /* Collections */,
+			);
+			productName = BiteLedger;
+			productReference = 3A18E15D2FACB60D2660FAC4 /* BiteLedger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC1D1410C315E04EF4A48B60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6AE4DB1303122EC9CC310EAF = {
+						ProvisioningStyle = Automatic;
+					};
+					E9F64B653E22137C54E83ADE = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 22BF49F6392950B62912968C /* Build configuration list for PBXProject "BiteLedger" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7467967BA8EA860736C79B54;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AAE7550484C38FE7234E268B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				23FC0639B27DB60CDC86C1D8 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DD241720A56C82369041B092 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9F64B653E22137C54E83ADE /* BiteLedger */,
+				6AE4DB1303122EC9CC310EAF /* BiteLedgerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA4685CBF895EB729F557C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD06931D3419BB9F1F68EF0 /* Assets.xcassets in Resources */,
+				E9010C08B63C7D791C3BF734 /* LaunchScreen.storyboard in Resources */,
+				A7C4AF48BB554B17EA4A0FC0 /* Main.storyboard in Resources */,
+				D887715A04F8DD80B267FB86 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2D09115F2532401F5B471C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9492389F53B81B8D0CD08D7A /* BLGLedgerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40E6B360790943031E12871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605BD6D63EA82B824CEC4A66 /* ContactWebSheet.swift in Sources */,
+				778CC9BDAD1AF6F3FDCC9216 /* APIConfig.swift in Sources */,
+				C5FC4EDACB406746409138DA /* BLGAccountService.swift in Sources */,
+				A9AAD595DD124D7E5D54060B /* BLGAppDelegate.swift in Sources */,
+				D0F68A139CD2F7EA714CDBEE /* BLGAssignPolicy.swift in Sources */,
+				58D5E06716737EB278D7EF89 /* BLGAssignViewController.swift in Sources */,
+				BD483C7FFE4D8E1ECAF4F377 /* BLGAssignViewModel.swift in Sources */,
+				2810304E7CB11B754BB2FDCC /* BLGBarcodeNormalizer.swift in Sources */,
+				431ED742F06E489A45DDEF9D /* BLGCSVExport.swift in Sources */,
+				79F4B417056035D5F3D3EE62 /* BLGCaptureRuntime.swift in Sources */,
+				E8A805083B7A37E25681E86A /* BLGCatalogClient.swift in Sources */,
+				A9CA9237F65B5BE97DA30E39 /* BLGCatalogDTO.swift in Sources */,
+				C52C35B8D4EFC6F6D472964B /* BLGDayKey.swift in Sources */,
+				3D3817C9BF38FF0C7A7BC99D /* BLGDayViewModel.swift in Sources */,
+				C823F7C0BB88A92DDF1DE60B /* BLGDoubleEntry.swift in Sources */,
+				A3C2B6D3D8721FB0FA03A335 /* BLGDrawerContainerController.swift in Sources */,
+				3C39B3785A7F4E76BDFD3144 /* BLGDrawerItem.swift in Sources */,
+				8313B8D7D90F98F5F1DE4CB9 /* BLGEmptyBoardView.swift in Sources */,
+				10E8A255F32260BEB20E1D16 /* BLGEntryCell.swift in Sources */,
+				0D39D96CF9E35336F3C9A7D7 /* BLGGoalsViewController.swift in Sources */,
+				02EBD26D66C82F5A876FC8FE /* BLGGoalsViewModel.swift in Sources */,
+				8CC3BFDF262296A76C07FA3D /* BLGHaptics.swift in Sources */,
+				66A00931E9E3EF06CC367EAD /* BLGKeyboardWatch.swift in Sources */,
+				0880F73772749E625C013AF7 /* BLGLaunchViewController.swift in Sources */,
+				7AE4DC2A667A049A1AD963B3 /* BLGLedgerStore.swift in Sources */,
+				D12B607880AA0F85C3559534 /* BLGLedgerViewController.swift in Sources */,
+				9F5A13AC8619F622B1ECFB7D /* BLGLookupViewController.swift in Sources */,
+				6E969E6FA9BA5362A4BCE430 /* BLGLookupViewModel.swift in Sources */,
+				6BC67CEEFAF02B015331C8D8 /* BLGModels.swift in Sources */,
+				985CC1BA2ACA41FB8F6F78D7 /* BLGOnboardingViewController.swift in Sources */,
+				7F3DCAD4351A874520F9AB02 /* BLGOnboardingViewModel.swift in Sources */,
+				2321B7B9D3329F4510CEAF10 /* BLGPalette.swift in Sources */,
+				3C8E426A854E63E2A3E15A52 /* BLGPaperView.swift in Sources */,
+				8B3340CC47709A68DF5DC814 /* BLGPlannerViewController.swift in Sources */,
+				246172F46127B8EE7E2E4E96 /* BLGPlannerViewModel.swift in Sources */,
+				F7480E221459CAAE372FB9C3 /* BLGPortionMath.swift in Sources */,
+				32205C6CFA966E96C57FAE01 /* BLGProductArt.swift in Sources */,
+				C6FF0F6B2359AB56941AB469 /* BLGProductCell.swift in Sources */,
+				A6407CFC730A42FEC79EF705 /* BLGProductViewController.swift in Sources */,
+				F83329F6253213F5B61CD7F0 /* BLGProductViewModel.swift in Sources */,
+				87321E1A9100C6484E198C09 /* BLGScanLineView.swift in Sources */,
+				2BD4F8D2541291904769FA14 /* BLGScanViewController.swift in Sources */,
+				AE72248ED25BC2015C6E2412 /* BLGScanViewModel.swift in Sources */,
+				9876155CAFCBE8B4E6FA9E6D /* BLGSceneDelegate.swift in Sources */,
+				26D70AEF513876CFDCCF6F66 /* BLGServices.swift in Sources */,
+				C1FA392DE2C6375543A3D38D /* BLGShelf.swift in Sources */,
+				029C882B2A907A3E20DCDA30 /* BLGStatementViewController.swift in Sources */,
+				E494A076ACB58047584FEBE7 /* BLGStatementViewModel.swift in Sources */,
+				BF49FC95151F8E82DC118D58 /* BLGWishlistViewController.swift in Sources */,
+				0C7D4283E30FEF392FEF4DFD /* BLGWishlistViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EFDCCEA2D72A3AF470FB843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9F64B653E22137C54E83ADE /* BiteLedger */;
+			targetProxy = C2AAAD42FC3631B615916564 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27FBEDE6C26EBA1445787926 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1431FF476741BBCFFAFC1AEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89F8B70E2EE490424AC0EBB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0832F68371BE2A090129B387 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05E0AF9591CA06BA39BFC3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.2;
+			};
+			name = Release;
+		};
+		1246BED46D04FCE3B20E528F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "BiteLedger reads barcodes to post entries into your food ledger.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger;
+				PRODUCT_NAME = BiteLedger;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A7BFBD70B3B28CD09DBB445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiteLedger.app/BiteLedger";
+			};
+			name = Release;
+		};
+		58A0B2FD93B562F6728DC66B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiteLedger.app/BiteLedger";
+			};
+			name = Debug;
+		};
+		61F62EB90A8BEE613463F1BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.2;
+			};
+			name = Debug;
+		};
+		CA70355CCE1813E2BBBA0FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "BiteLedger reads barcodes to post entries into your food ledger.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger;
+				PRODUCT_NAME = BiteLedger;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22BF49F6392950B62912968C /* Build configuration list for PBXProject "BiteLedger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61F62EB90A8BEE613463F1BC /* Debug */,
+				05E0AF9591CA06BA39BFC3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7354152A2932687D111312B7 /* Build configuration list for PBXNativeTarget "BiteLedger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA70355CCE1813E2BBBA0FDE /* Debug */,
+				1246BED46D04FCE3B20E528F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		993FF05C9E4BBF7FD3F33CD4 /* Build configuration list for PBXNativeTarget "BiteLedgerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A0B2FD93B562F6728DC66B /* Debug */,
+				4A7BFBD70B3B28CD09DBB445 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAE7550484C38FE7234E268B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
+			requirement = {
+				kind = revision;
+				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
+			};
+		};
+		23FC0639B27DB60CDC86C1D8 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A0EB16C84DDFB87DD0BEAFD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAE7550484C38FE7234E268B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B4E0844075CBA878F40D4BEF /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23FC0639B27DB60CDC86C1D8 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FC1D1410C315E04EF4A48B60 /* Project object */;
+}

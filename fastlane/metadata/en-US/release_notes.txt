@@ -1,0 +1,1 @@
+Version 1.0 initial release. Includes onboarding with daily targets, the Ledger running balance, Lookup and Scan into Folio and Post entry, Statement with Export CSV, a 14-day Planner, Wishlist, and Goals for Energy and macros.
