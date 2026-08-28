@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		605BD6D63EA82B824CEC4A66 /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854321221CB56D88ECF3A69B /* ContactWebSheet.swift */; };
-		778CC9BDAD1AF6F3FDCC9216 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717C74DD26A691DF2B772B0 /* APIConfig.swift */; };
 		029C882B2A907A3E20DCDA30 /* BLGStatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA8701C2E2F72E63C7D60 /* BLGStatementViewController.swift */; };
 		02EBD26D66C82F5A876FC8FE /* BLGGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82528C6B4C2F4F20F6C1C898 /* BLGGoalsViewModel.swift */; };
 		0880F73772749E625C013AF7 /* BLGLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F18EAD30857202A1A1A0C74 /* BLGLaunchViewController.swift */; };
+		08885FBD7291BEF428D1FE2F /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3D7C1154C918116B726FB /* ContactWebSheet.swift */; };
 		0C7D4283E30FEF392FEF4DFD /* BLGWishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02961A9E612B164ACA2B08BB /* BLGWishlistViewModel.swift */; };
 		0D39D96CF9E35336F3C9A7D7 /* BLGGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1238F30C3B4F98E15CFECF38 /* BLGGoalsViewController.swift */; };
 		10E8A255F32260BEB20E1D16 /* BLGEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2293CA8D8FCCA27A4070FDF /* BLGEntryCell.swift */; };
@@ -21,6 +20,7 @@
 		26D70AEF513876CFDCCF6F66 /* BLGServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885069BE35C41313002C2C4 /* BLGServices.swift */; };
 		2810304E7CB11B754BB2FDCC /* BLGBarcodeNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D5D5D9200515FE6DABBCA2 /* BLGBarcodeNormalizer.swift */; };
 		2BD4F8D2541291904769FA14 /* BLGScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF888070A76137035F4174D1 /* BLGScanViewController.swift */; };
+		2ED14EEFF0DC5B8EEF783FAF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2EF08916B58C69C1EF4BE75E /* Alamofire */; };
 		32205C6CFA966E96C57FAE01 /* BLGProductArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C9FD079D646BED9090DE6 /* BLGProductArt.swift */; };
 		3C39B3785A7F4E76BDFD3144 /* BLGDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F60E944E717F5F1F990560 /* BLGDrawerItem.swift */; };
 		3C8E426A854E63E2A3E15A52 /* BLGPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91A96D1FF46EFB7432C3D5 /* BLGPaperView.swift */; };
@@ -41,6 +41,7 @@
 		985CC1BA2ACA41FB8F6F78D7 /* BLGOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787C05BCFC907B7A01FEEAB /* BLGOnboardingViewController.swift */; };
 		9876155CAFCBE8B4E6FA9E6D /* BLGSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */; };
 		9F5A13AC8619F622B1ECFB7D /* BLGLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBD65994D73272A8460FCE /* BLGLookupViewController.swift */; };
+		A11DB3C6330C6EE9747C20CD /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1051A3AF0D07348A788F07 /* APIConfig.swift */; };
 		A3C2B6D3D8721FB0FA03A335 /* BLGDrawerContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC2EF40A69408BCFE7BE6E8 /* BLGDrawerContainerController.swift */; };
 		A6407CFC730A42FEC79EF705 /* BLGProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EC689BCAF3922DC1C0FCEF /* BLGProductViewController.swift */; };
 		A7C4AF48BB554B17EA4A0FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FBEDE6C26EBA1445787926 /* Main.storyboard */; };
@@ -77,8 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		854321221CB56D88ECF3A69B /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
-		0717C74DD26A691DF2B772B0 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCatalogClient.swift; sourceTree = "<group>"; };
 		02961A9E612B164ACA2B08BB /* BLGWishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGWishlistViewModel.swift; sourceTree = "<group>"; };
 		0832F68371BE2A090129B387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		1431FF476741BBCFFAFC1AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16EBBB918D536A526BAFA842 /* BLGDoubleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDoubleEntry.swift; sourceTree = "<group>"; };
 		19D352FD10FC4AE4E86C8EEB /* BLGDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDayViewModel.swift; sourceTree = "<group>"; };
+		1C1051A3AF0D07348A788F07 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		1DFB4332ECA037CFB322B3BA /* BLGAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAppDelegate.swift; sourceTree = "<group>"; };
 		278BD0B6002FD5BABFFDE6A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F18EAD30857202A1A1A0C74 /* BLGLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLaunchViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +122,7 @@
 		C61042D8E5B377747F5EFAD3 /* BLGProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductCell.swift; sourceTree = "<group>"; };
 		C684C6EDDAC54388851E4475 /* BLGAssignPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAssignPolicy.swift; sourceTree = "<group>"; };
 		CDC2EF40A69408BCFE7BE6E8 /* BLGDrawerContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDrawerContainerController.swift; sourceTree = "<group>"; };
+		CDC3D7C1154C918116B726FB /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
 		D885069BE35C41313002C2C4 /* BLGServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGServices.swift; sourceTree = "<group>"; };
 		DC225AF98E911FCFF60C0C9A /* BLGProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductViewModel.swift; sourceTree = "<group>"; };
 		DE36954353BC781C34B199BF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 			files = (
 				C34B9317DAB250BC1DDE3560 /* libsqlite3.tbd in Frameworks */,
 				EBD9A11FFAD3DC0C741B225A /* Collections in Frameworks */,
+				2ED14EEFF0DC5B8EEF783FAF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,10 +200,9 @@
 		8571821B60075AFEA8297FB8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1C1051A3AF0D07348A788F07 /* APIConfig.swift */,
 				5B50799890545B067039D5DB /* BLGAccountService.swift */,
 				1DFB4332ECA037CFB322B3BA /* BLGAppDelegate.swift */,
-				854321221CB56D88ECF3A69B /* ContactWebSheet.swift */,
-				0717C74DD26A691DF2B772B0 /* APIConfig.swift */,
 				C684C6EDDAC54388851E4475 /* BLGAssignPolicy.swift */,
 				A7D5D5D9200515FE6DABBCA2 /* BLGBarcodeNormalizer.swift */,
 				022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */,
@@ -224,6 +225,7 @@
 				0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */,
 				D885069BE35C41313002C2C4 /* BLGServices.swift */,
 				6F86951A57678C640DCA1C45 /* BLGShelf.swift */,
+				CDC3D7C1154C918116B726FB /* ContactWebSheet.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -337,8 +339,8 @@
 			);
 			name = BiteLedger;
 			packageProductDependencies = (
-				1A0EB16C84DDFB87DD0BEAFD /* Alamofire */,
 				B4E0844075CBA878F40D4BEF /* Collections */,
+				2EF08916B58C69C1EF4BE75E /* Alamofire */,
 			);
 			productName = BiteLedger;
 			productReference = 3A18E15D2FACB60D2660FAC4 /* BiteLedger.app */;
@@ -371,7 +373,7 @@
 			mainGroup = 7467967BA8EA860736C79B54;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AAE7550484C38FE7234E268B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8BA35054002698E05C17697E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				23FC0639B27DB60CDC86C1D8 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -412,8 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				605BD6D63EA82B824CEC4A66 /* ContactWebSheet.swift in Sources */,
-				778CC9BDAD1AF6F3FDCC9216 /* APIConfig.swift in Sources */,
+				A11DB3C6330C6EE9747C20CD /* APIConfig.swift in Sources */,
 				C5FC4EDACB406746409138DA /* BLGAccountService.swift in Sources */,
 				A9AAD595DD124D7E5D54060B /* BLGAppDelegate.swift in Sources */,
 				D0F68A139CD2F7EA714CDBEE /* BLGAssignPolicy.swift in Sources */,
@@ -462,6 +463,7 @@
 				E494A076ACB58047584FEBE7 /* BLGStatementViewModel.swift in Sources */,
 				BF49FC95151F8E82DC118D58 /* BLGWishlistViewController.swift in Sources */,
 				0C7D4283E30FEF392FEF4DFD /* BLGWishlistViewModel.swift in Sources */,
+				08885FBD7291BEF428D1FE2F /* ContactWebSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,8 +557,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -565,9 +568,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -690,8 +693,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -700,9 +704,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -751,14 +755,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AAE7550484C38FE7234E268B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
-			requirement = {
-				kind = revision;
-				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
-			};
-		};
 		23FC0639B27DB60CDC86C1D8 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-collections.git";
@@ -767,12 +763,20 @@
 				minimumVersion = 1.1.4;
 			};
 		};
+		8BA35054002698E05C17697E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
+			requirement = {
+				kind = revision;
+				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A0EB16C84DDFB87DD0BEAFD /* Alamofire */ = {
+		2EF08916B58C69C1EF4BE75E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAE7550484C38FE7234E268B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 8BA35054002698E05C17697E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		B4E0844075CBA878F40D4BEF /* Collections */ = {
