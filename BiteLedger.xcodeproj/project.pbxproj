@@ -24,12 +24,14 @@
 		32205C6CFA966E96C57FAE01 /* BLGProductArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C9FD079D646BED9090DE6 /* BLGProductArt.swift */; };
 		3C39B3785A7F4E76BDFD3144 /* BLGDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F60E944E717F5F1F990560 /* BLGDrawerItem.swift */; };
 		3C8E426A854E63E2A3E15A52 /* BLGPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91A96D1FF46EFB7432C3D5 /* BLGPaperView.swift */; };
+		3CA8E3E750E74AF56101FAF7 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12DAB116DE6355F014ED5D8 /* VisionKit.framework */; };
 		3D3817C9BF38FF0C7A7BC99D /* BLGDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D352FD10FC4AE4E86C8EEB /* BLGDayViewModel.swift */; };
 		431ED742F06E489A45DDEF9D /* BLGCSVExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3197D18BAF2BFC3B77F62169 /* BLGCSVExport.swift */; };
 		58D5E06716737EB278D7EF89 /* BLGAssignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706AFAE1AA645FA29E4BB4A5 /* BLGAssignViewController.swift */; };
 		66A00931E9E3EF06CC367EAD /* BLGKeyboardWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2A35A1A3E824E3550AE75C /* BLGKeyboardWatch.swift */; };
 		6BC67CEEFAF02B015331C8D8 /* BLGModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319E61C73A7EB5B74DD52FDD /* BLGModels.swift */; };
 		6E969E6FA9BA5362A4BCE430 /* BLGLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B71BE98CA7572016348C5 /* BLGLookupViewModel.swift */; };
+		7665E02F1C6761B1D70D37F0 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150BF2C5917F7318669FD296 /* Vision.framework */; };
 		79F4B417056035D5F3D3EE62 /* BLGCaptureRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D658377B38EF75B223363 /* BLGCaptureRuntime.swift */; };
 		7AE4DC2A667A049A1AD963B3 /* BLGLedgerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCB45C846F9667E7E279A6 /* BLGLedgerStore.swift */; };
 		7F3DCAD4351A874520F9AB02 /* BLGOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AC8348164CD3A4012A519 /* BLGOnboardingViewModel.swift */; };
@@ -86,6 +88,7 @@
 		0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGSceneDelegate.swift; sourceTree = "<group>"; };
 		1238F30C3B4F98E15CFECF38 /* BLGGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGGoalsViewController.swift; sourceTree = "<group>"; };
 		1431FF476741BBCFFAFC1AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		150BF2C5917F7318669FD296 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 		16EBBB918D536A526BAFA842 /* BLGDoubleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDoubleEntry.swift; sourceTree = "<group>"; };
 		19D352FD10FC4AE4E86C8EEB /* BLGDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDayViewModel.swift; sourceTree = "<group>"; };
 		1C1051A3AF0D07348A788F07 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		E3CBD65994D73272A8460FCE /* BLGLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLookupViewController.swift; sourceTree = "<group>"; };
 		E6673FB875C24ACA3B38E2D6 /* BLGWishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGWishlistViewController.swift; sourceTree = "<group>"; };
 		F0542380D7859CF52637862C /* BLGLedgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLedgerViewController.swift; sourceTree = "<group>"; };
+		F12DAB116DE6355F014ED5D8 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
 		F54B71BE98CA7572016348C5 /* BLGLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLookupViewModel.swift; sourceTree = "<group>"; };
 		F5F701CC0BEF0BB952585C0E /* BLGHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGHaptics.swift; sourceTree = "<group>"; };
 		F7CCB45C846F9667E7E279A6 /* BLGLedgerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLedgerStore.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34B9317DAB250BC1DDE3560 /* libsqlite3.tbd in Frameworks */,
+				3CA8E3E750E74AF56101FAF7 /* VisionKit.framework in Frameworks */,
+				7665E02F1C6761B1D70D37F0 /* Vision.framework in Frameworks */,
 				EBD9A11FFAD3DC0C741B225A /* Collections in Frameworks */,
 				2ED14EEFF0DC5B8EEF783FAF /* Alamofire in Frameworks */,
 			);
@@ -176,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				A4968370EBAC0A40D5DDED8D /* libsqlite3.tbd */,
+				150BF2C5917F7318669FD296 /* Vision.framework */,
+				F12DAB116DE6355F014ED5D8 /* VisionKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -359,6 +367,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					6AE4DB1303122EC9CC310EAF = {
+						ProvisioningStyle = Automatic;
+					};
+					E9F64B653E22137C54E83ADE = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -694,7 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TQA73XJF6K;
@@ -717,7 +728,6 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.martens.test;
 				PRODUCT_NAME = BiteLedger;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
