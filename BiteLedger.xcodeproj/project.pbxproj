@@ -63,6 +63,7 @@
 		E8A805083B7A37E25681E86A /* BLGCatalogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */; };
 		E9010C08B63C7D791C3BF734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F8B70E2EE490424AC0EBB5 /* LaunchScreen.storyboard */; };
 		EBD9A11FFAD3DC0C741B225A /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = B4E0844075CBA878F40D4BEF /* Collections */; };
+		F42501B44F40BE07793BD54E /* BLGDemoBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA614C97C63BA62D63CAE4 /* BLGDemoBarcode.swift */; };
 		F7480E221459CAAE372FB9C3 /* BLGPortionMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE328010B11778573695959F /* BLGPortionMath.swift */; };
 		F83329F6253213F5B61CD7F0 /* BLGProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC225AF98E911FCFF60C0C9A /* BLGProductViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		022B28B7E3EE5A282D42E727 /* BLGCatalogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCatalogClient.swift; sourceTree = "<group>"; };
 		02961A9E612B164ACA2B08BB /* BLGWishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGWishlistViewModel.swift; sourceTree = "<group>"; };
 		0832F68371BE2A090129B387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EFA614C97C63BA62D63CAE4 /* BLGDemoBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGDemoBarcode.swift; sourceTree = "<group>"; };
 		0F2180B3D5DFC6A4533DA61A /* BLGSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGSceneDelegate.swift; sourceTree = "<group>"; };
 		1238F30C3B4F98E15CFECF38 /* BLGGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGGoalsViewController.swift; sourceTree = "<group>"; };
 		1431FF476741BBCFFAFC1AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				811D658377B38EF75B223363 /* BLGCaptureRuntime.swift */,
+				0EFA614C97C63BA62D63CAE4 /* BLGDemoBarcode.swift */,
 				E107BC806AC4D258A941B036 /* BLGScanLineView.swift */,
 				FF888070A76137035F4174D1 /* BLGScanViewController.swift */,
 				C48FB8275321884C28866A94 /* BLGScanViewModel.swift */,
@@ -427,6 +430,7 @@
 				A9CA9237F65B5BE97DA30E39 /* BLGCatalogDTO.swift in Sources */,
 				C52C35B8D4EFC6F6D472964B /* BLGDayKey.swift in Sources */,
 				3D3817C9BF38FF0C7A7BC99D /* BLGDayViewModel.swift in Sources */,
+				F42501B44F40BE07793BD54E /* BLGDemoBarcode.swift in Sources */,
 				C823F7C0BB88A92DDF1DE60B /* BLGDoubleEntry.swift in Sources */,
 				A3C2B6D3D8721FB0FA03A335 /* BLGDrawerContainerController.swift in Sources */,
 				3C39B3785A7F4E76BDFD3144 /* BLGDrawerItem.swift in Sources */,
@@ -559,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -576,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger;
 				PRODUCT_NAME = BiteLedger;
 				SDKROOT = iphoneos;
@@ -695,7 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -712,7 +716,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger;
 				PRODUCT_NAME = BiteLedger;
 				SDKROOT = iphoneos;
