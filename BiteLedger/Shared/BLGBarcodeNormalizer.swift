@@ -29,6 +29,9 @@ enum BLGBarcodeNormalizer {
         if length == 12 {
             push("0" + run, into: &found, seen: &seen)
         }
+        if length == 14, run.hasPrefix("0") {
+            push(String(run.dropFirst()), into: &found, seen: &seen)
+        }
     }
 
     private static func push(_ value: String, into found: inout [String], seen: inout Set<String>) {

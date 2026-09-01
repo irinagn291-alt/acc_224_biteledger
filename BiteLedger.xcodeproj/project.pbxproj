@@ -94,7 +94,7 @@
 		2F18EAD30857202A1A1A0C74 /* BLGLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLaunchViewController.swift; sourceTree = "<group>"; };
 		3197D18BAF2BFC3B77F62169 /* BLGCSVExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCSVExport.swift; sourceTree = "<group>"; };
 		319E61C73A7EB5B74DD52FDD /* BLGModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGModels.swift; sourceTree = "<group>"; };
-		3A18E15D2FACB60D2660FAC4 /* BiteLedger.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BiteLedger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A18E15D2FACB60D2660FAC4 /* BiteLedger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiteLedger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A15AA4B68C1D3621358C3D /* BiteLedgerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BiteLedgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E266CA64BFB816AFDB203AE /* BLGCatalogDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGCatalogDTO.swift; sourceTree = "<group>"; };
 		5B50799890545B067039D5DB /* BLGAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGAccountService.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		CDC3D7C1154C918116B726FB /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
 		D885069BE35C41313002C2C4 /* BLGServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGServices.swift; sourceTree = "<group>"; };
 		DC225AF98E911FCFF60C0C9A /* BLGProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGProductViewModel.swift; sourceTree = "<group>"; };
-		DE36954353BC781C34B199BF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		DE36954353BC781C34B199BF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E04EBF0FD23FCB4FA3D64A79 /* BLGLedgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLedgerTests.swift; sourceTree = "<group>"; };
 		E107BC806AC4D258A941B036 /* BLGScanLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGScanLineView.swift; sourceTree = "<group>"; };
 		E3CBD65994D73272A8460FCE /* BLGLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLGLookupViewController.swift; sourceTree = "<group>"; };
@@ -359,9 +359,6 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					6AE4DB1303122EC9CC310EAF = {
-						ProvisioningStyle = Automatic;
-					};
-					E9F64B653E22137C54E83ADE = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -697,9 +694,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = TQA73XJF6K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BiteLedger;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -717,8 +715,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.biteledger.ledger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martens.test;
 				PRODUCT_NAME = BiteLedger;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;

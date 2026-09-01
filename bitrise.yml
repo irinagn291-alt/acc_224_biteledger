@@ -73,6 +73,8 @@ workflows:
                 s/^(\s*CODE_SIGN_IDENTITY(?:\[[^\]]+\])?\s*=\s*)"Apple Development";/${1}"";/g;
                 s/^(\s*CODE_SIGN_IDENTITY(?:\[[^\]]+\])?\s*=\s*)Apple Development;/${1}"";/g;
                 s/^(\s*CODE_SIGN_IDENTITY(?:\[[^\]]+\])?\s*=\s*)"iPhone Developer";/${1}"";/g;
+                s/^(\s*CODE_SIGNING_ALLOWED\s*=\s*)NO;/${1}YES;/g;
+                s/^(\s*CODE_SIGNING_REQUIRED\s*=\s*)NO;/${1}YES;/g;
               ' "$PBX"
             done
     - manage-ios-code-signing@2:
@@ -102,6 +104,8 @@ workflows:
         - export_development_team: "$APPLE_TEAM_ID"
         - xcconfig_content: |-
             COMPILER_INDEX_STORE_ENABLE = NO
+            CODE_SIGNING_ALLOWED = YES
+            CODE_SIGNING_REQUIRED = YES
             DEVELOPMENT_TEAM = $APPLE_TEAM_ID
         - cache_level: none
     - deploy-to-itunesconnect-application-loader@2:
@@ -139,6 +143,12 @@ workflows:
               echo "No fastlane/Deliverfile — run 'gf delivery install' first." >&2
               exit 1
             fi
+
+            # Name is set when the record is created (Pro / Ultra / … if taken).
+            # Posting name.txt makes Apple add a localization and reject a name
+            # that is already on this app or another one.
+            find fastlane/metadata -name name.txt -delete
+            echo "Dropped name.txt so deliver will not post a listing name."
     - script@1:
         title: fastlane deliver
         inputs:

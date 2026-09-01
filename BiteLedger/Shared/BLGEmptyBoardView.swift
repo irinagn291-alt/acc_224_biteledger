@@ -30,6 +30,7 @@ final class BLGEmptyBoardView: UIView {
 
     private func blg_build() {
         backgroundColor = BLGPalette.surface
+        clipsToBounds = true
         blgImageView.contentMode = .scaleAspectFit
         blgImageView.isAccessibilityElement = true
         blgTitleLabel.font = BLGTypography.bold(.heading)
@@ -57,11 +58,12 @@ final class BLGEmptyBoardView: UIView {
         addSubview(stack)
         blgImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            stack.topAnchor.constraint(equalTo: topAnchor, constant: BLGSpace.n(2)),
             stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: BLGSpace.n(3)),
             stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -BLGSpace.n(3)),
-            stack.centerYAnchor.constraint(equalTo: centerYAnchor),
-            blgImageView.widthAnchor.constraint(equalToConstant: 160),
-            blgImageView.heightAnchor.constraint(equalToConstant: 160),
+            stack.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -BLGSpace.n(2)),
+            blgImageView.widthAnchor.constraint(equalToConstant: 120),
+            blgImageView.heightAnchor.constraint(equalToConstant: 120),
             blgActionButton.heightAnchor.constraint(greaterThanOrEqualToConstant: BLGSpace.tap)
         ])
     }

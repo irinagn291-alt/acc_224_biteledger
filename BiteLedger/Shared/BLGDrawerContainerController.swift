@@ -97,18 +97,15 @@ final class BLGDrawerContainerController: UIViewController, UITableViewDataSourc
     }
 
     private func blg_decorate(_ viewController: UIViewController) {
-        let button = UIButton(type: .system)
-        button.frame = CGRect(x: 0, y: 0, width: BLGSpace.tap, height: BLGSpace.tap)
-        button.accessibilityLabel = "Open ledger menu"
-        if let face = UIImage(named: "blg_ControlFace") {
-            button.setImage(face.withRenderingMode(.alwaysOriginal), for: .normal)
-            button.imageView?.contentMode = .scaleAspectFit
-        } else {
-            button.setTitle("Menu", for: .normal)
-        }
-        button.addTarget(self, action: #selector(blg_hamburger), for: .touchUpInside)
-        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
-        viewController.navigationItem.leftBarButtonItem?.accessibilityLabel = "Open ledger menu"
+        let item = UIBarButtonItem(
+            image: UIImage(systemName: "line.3.horizontal"),
+            style: .plain,
+            target: self,
+            action: #selector(blg_hamburger)
+        )
+        item.accessibilityLabel = "Open ledger menu"
+        viewController.navigationItem.leftBarButtonItem = item
+        viewController.navigationItem.style = .browser
     }
 
     @objc private func blg_hamburger() {

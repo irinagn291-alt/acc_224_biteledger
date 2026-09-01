@@ -74,7 +74,7 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
             .sink { [weak self] state in
                 switch state {
                 case .idle:
-                    self?.blgStatusLabel.text = "Align a barcode on the ledger line."
+                    self?.blgStatusLabel.text = "Centre a barcode or QR in the window, or tap a shelf row."
                     self?.blgLookupButton.isEnabled = true
                 case .loading:
                     self?.blgStatusLabel.text = "Posting the code to the catalogue…"
@@ -102,7 +102,7 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
         case .ready:
             blgPermissionBoard.isHidden = true
             blgSettingsButton.isHidden = true
-            blgSampleStack.isHidden = true
+            blgSampleStack.isHidden = false
             blg_start()
         case .noDevice:
             blgPermissionBoard.isHidden = false
@@ -193,8 +193,9 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
 
     private func blg_updateInterest() {
         guard let previewLayer, let output = capture.output, previewLayer.connection != nil else { return }
-        let converted = previewLayer.metadataOutputRectConverted(fromLayerRect: lineView.windowRect)
-        output.rectOfInterest = converted
+        let inPreview = lineView.convert(lineView.detectionRect, to: blgPreviewHost)
+        guard inPreview.width > 8, inPreview.height > 8 else { return }
+        output.rectOfInterest = previewLayer.metadataOutputRectConverted(fromLayerRect: inPreview)
     }
 
     nonisolated func metadataOutput(
@@ -212,6 +213,13 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
 
     private func blg_installSamples() {
         blgSampleStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        let demo = UIButton(type: .system)
+        BLGStyle.ghostButton(demo, title: "Show demo QR")
+        demo.accessibilityLabel = "Show demo QR for App Review"
+        demo.addAction(UIAction { [weak self] _ in
+            self?.blg_presentDemoQR()
+        }, for: .touchUpInside)
+        blgSampleStack.addArrangedSubview(demo)
         for product in BLGShelf.products {
             let button = UIButton(type: .system)
             BLGStyle.ghostButton(button, title: product.name)
@@ -252,6 +260,15 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
     private func blg_openSettings() {
         guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
         UIApplication.shared.open(url)
+    }
+
+    private func blg_presentDemoQR() {
+        let sheet = BLGDemoBarcodeViewController()
+        sheet.onPost = { [weak self] in
+            self?.viewModel.manual.send(BLGDemoBarcode.code)
+        }
+        let nav = UINavigationController(rootViewController: sheet)
+        present(nav, animated: true)
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

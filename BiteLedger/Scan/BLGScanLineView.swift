@@ -9,7 +9,7 @@ final class BLGScanLineView: UIView {
         isOpaque = false
         backgroundColor = .clear
         isAccessibilityElement = true
-        accessibilityLabel = "Ledger scan line"
+        accessibilityLabel = "Ledger scan window for barcode or QR"
         isUserInteractionEnabled = false
     }
 
@@ -20,14 +20,26 @@ final class BLGScanLineView: UIView {
         isUserInteractionEnabled = false
     }
 
+    /// Square region used for `rectOfInterest`. A thin ledger line cannot hold a QR.
+    private(set) var detectionRect: CGRect = .zero
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        let height = max(BLGSpace.n(7), bounds.height * 0.14)
+        let inset = BLGSpace.n(2)
+        let usable = bounds.insetBy(dx: inset, dy: inset)
+        let side = min(usable.width, max(usable.height * 0.72, BLGSpace.n(22)))
+        detectionRect = CGRect(
+            x: usable.midX - side / 2,
+            y: usable.midY - side / 2,
+            width: side,
+            height: side
+        )
+        let lineHeight = max(BLGSpace.n(7), bounds.height * 0.14)
         windowRect = CGRect(
-            x: bounds.minX + BLGSpace.n(2),
-            y: bounds.midY - height / 2,
-            width: bounds.width - BLGSpace.n(4),
-            height: height
+            x: detectionRect.minX,
+            y: detectionRect.midY - lineHeight / 2,
+            width: detectionRect.width,
+            height: lineHeight
         )
         setNeedsDisplay()
     }
@@ -37,10 +49,11 @@ final class BLGScanLineView: UIView {
         BLGPalette.ink.withAlphaComponent(0.55).setFill()
         context.fill(bounds)
         context.setBlendMode(.clear)
-        context.fill(windowRect)
+        context.fill(detectionRect)
         context.setBlendMode(.normal)
         BLGPalette.accent.setStroke()
         context.setLineWidth(2)
+        context.stroke(detectionRect.insetBy(dx: 1, dy: 1))
         context.stroke(windowRect.insetBy(dx: 1, dy: 1))
         BLGPalette.surface.setStroke()
         context.setLineWidth(1)

@@ -18,6 +18,15 @@ final class BLGLedgerTests: XCTestCase {
         XCTAssertEqual(BLGBarcodeNormalizer.normalized("https://world.openfoodfacts.org/product/3017620422003/nutella"), "3017620422003")
         XCTAssertNil(BLGBarcodeNormalizer.normalized("no-digits-here"))
         XCTAssertNil(BLGBarcodeNormalizer.normalized("1234567"))
+        XCTAssertEqual(BLGBarcodeNormalizer.normalized("7394376616037"), "7394376616037")
+        XCTAssertEqual(
+            BLGBarcodeNormalizer.normalized("https://world.openfoodfacts.org/product/7394376616037/oat-milk"),
+            "7394376616037"
+        )
+        let gs1 = BLGBarcodeNormalizer.candidates(from: "https://id.gs1.org/01/07394376616037")
+        XCTAssertTrue(gs1.contains("07394376616037"))
+        XCTAssertTrue(gs1.contains("7394376616037"))
+        XCTAssertTrue(BLGBarcodeNormalizer.candidates(from: "(01)07394376616037").contains("7394376616037"))
     }
 
     func testMissingMacroStaysUnknown() {

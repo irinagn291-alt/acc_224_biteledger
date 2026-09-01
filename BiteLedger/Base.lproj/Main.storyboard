@@ -425,7 +425,7 @@
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STME" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="240" id="STe1"/>
+                                            <constraint firstAttribute="height" constant="360" id="STe1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -487,7 +487,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUKE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="LUe1"/>
+                                    <constraint firstAttribute="height" constant="360" id="LUe1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -802,7 +802,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLNE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="PLe1"/>
+                                    <constraint firstAttribute="height" constant="360" id="PLe1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -851,7 +851,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSHE" customClass="BLGEmptyBoardView" customModule="BiteLedger" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="WSe1"/>
+                                    <constraint firstAttribute="height" constant="360" id="WSe1"/>
                                 </constraints>
                             </view>
                         </subviews>
