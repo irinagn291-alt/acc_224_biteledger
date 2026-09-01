@@ -1,10 +1,11 @@
 import AVFoundation
 import Combine
 import UIKit
+import VisionKit
 
-/// Live barcode capture via AVCaptureMetadataOutput, restricted to the ledger-line window.
+/// Scan desk. Live capture matches the Food apps: VisionKit DataScanner, QR + EAN, auto-fire on recognize.
 @MainActor
-final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UITextFieldDelegate {
+final class BLGScanViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var blgPreviewHost: UIView!
     @IBOutlet weak var blgOverlayHost: UIView!
     @IBOutlet weak var blgManualField: UITextField!
@@ -16,8 +17,7 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
 
     private let viewModel = BLGScanViewModel()
     private var bag = Set<AnyCancellable>()
-    private let capture = BLGCaptureRuntime()
-    private var previewLayer: AVCaptureVideoPreviewLayer?
+    private let catcher = BLGVisionCatcher()
     private let lineView = BLGScanLineView()
     private var pendingProduct: BLGProduct?
 
@@ -33,6 +33,7 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
         BLGStyle.accentButton(blgLookupButton, title: "Post code")
         BLGStyle.ghostButton(blgSettingsButton, title: "Open Settings")
         BLGStyle.mutedLabel(blgStatusLabel, step: .caption)
+        blgOverlayHost.isUserInteractionEnabled = false
         blgOverlayHost.addSubview(lineView)
         lineView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -43,23 +44,25 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
         ])
         blg_installSamples()
         bind()
+        catcher.onCode = { [weak self] raw in
+            self?.viewModel.decoded.send(raw)
+        }
         blg_observeLifecycle()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         blg_evaluatePermission()
+        if viewModel.permission == .ready {
+            blg_start()
+        }
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        previewLayer?.frame = blgPreviewHost.bounds
-        blg_updateInterest()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        capture.stop()
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if view.window == nil {
+            catcher.stop()
+        }
     }
 
     private func bind() {
@@ -74,7 +77,7 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
             .sink { [weak self] state in
                 switch state {
                 case .idle:
-                    self?.blgStatusLabel.text = "Centre a barcode or QR in the window, or tap a shelf row."
+                    self?.blgStatusLabel.text = "Point at a barcode or QR. It posts when the code is recognised."
                     self?.blgLookupButton.isEnabled = true
                 case .loading:
                     self?.blgStatusLabel.text = "Posting the code to the catalogue…"
@@ -166,49 +169,12 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
     }
 
     private func blg_start() {
-        capture.queue.async { [capture] in
-            capture.configureIfNeeded()
-            if capture.session.isRunning == false {
-                capture.session.startRunning()
-            }
-            DispatchQueue.main.async { [weak self] in
-                self?.capture.output?.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-                self?.blg_attachPreview()
-            }
-        }
-    }
-
-    private func blg_attachPreview() {
-        guard previewLayer == nil else {
-            blg_updateInterest()
+        guard BLGVisionCatcher.isUsable else {
+            viewModel.blg_setPermission(.noDevice)
             return
         }
-        let layer = AVCaptureVideoPreviewLayer(session: capture.session)
-        layer.videoGravity = .resizeAspectFill
-        layer.frame = blgPreviewHost.bounds
-        blgPreviewHost.layer.insertSublayer(layer, at: 0)
-        previewLayer = layer
-        blg_updateInterest()
-    }
-
-    private func blg_updateInterest() {
-        guard let previewLayer, let output = capture.output, previewLayer.connection != nil else { return }
-        let inPreview = lineView.convert(lineView.detectionRect, to: blgPreviewHost)
-        guard inPreview.width > 8, inPreview.height > 8 else { return }
-        output.rectOfInterest = previewLayer.metadataOutputRectConverted(fromLayerRect: inPreview)
-    }
-
-    nonisolated func metadataOutput(
-        _ output: AVCaptureMetadataOutput,
-        didOutput metadataObjects: [AVMetadataObject],
-        from connection: AVCaptureConnection
-    ) {
-        guard let first = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
-              let value = first.stringValue
-        else { return }
-        DispatchQueue.main.async { [weak self] in
-            self?.viewModel.decoded.send(value)
-        }
+        catcher.embed(in: blgPreviewHost, parent: self)
+        catcher.start()
     }
 
     private func blg_installSamples() {
@@ -235,14 +201,14 @@ final class BLGScanViewController: UIViewController, AVCaptureMetadataOutputObje
         NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)
             .receive(on: RunLoop.main)
             .sink { [weak self] _ in
-                self?.capture.stop()
+                self?.catcher.stop()
             }
             .store(in: &bag)
         NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)
             .receive(on: RunLoop.main)
             .sink { [weak self] _ in
-                if self?.viewIfLoaded?.window != nil {
-                    self?.blg_evaluatePermission()
+                if self?.viewIfLoaded?.window != nil, self?.viewModel.permission == .ready {
+                    self?.blg_start()
                 }
             }
             .store(in: &bag)

@@ -48,6 +48,8 @@ targets:
         SWIFT_EMIT_LOC_STRINGS: YES
     dependencies:
       - sdk: libsqlite3.tbd
+      - sdk: VisionKit.framework
+      - sdk: Vision.framework
       - package: SwiftCollections
         product: Collections
       - package: Alamofire

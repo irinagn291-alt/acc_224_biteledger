@@ -9,12 +9,26 @@ enum BLGDemoBarcode {
     static func qrImage(dimension: CGFloat = 720) -> UIImage? {
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         filter.setValue(Data(code.utf8), forKey: "inputMessage")
-        filter.setValue("M", forKey: "inputCorrectionLevel")
-        guard let output = filter.outputImage else { return nil }
-        let scale = max(dimension / max(output.extent.width, 1), 1)
-        let scaled = output.transformed(by: CGAffineTransform(scaleX: scale, y: scale))
-        let context = CIContext()
-        guard let cgImage = context.createCGImage(scaled, from: scaled.extent) else { return nil }
+        filter.setValue("H", forKey: "inputCorrectionLevel")
+        guard let raw = filter.outputImage,
+              let color = CIFilter(name: "CIFalseColor")
+        else { return nil }
+        color.setValue(raw, forKey: kCIInputImageKey)
+        color.setValue(CIColor.black, forKey: "inputColor0")
+        color.setValue(CIColor.white, forKey: "inputColor1")
+        guard let tinted = color.outputImage else { return nil }
+        let scale = max(dimension / max(tinted.extent.width, 1), 1)
+        let scaled = tinted.transformed(by: CGAffineTransform(scaleX: scale, y: scale))
+        let pad: CGFloat = 48
+        let canvas = CIImage(color: .white).cropped(to: CGRect(
+            x: 0,
+            y: 0,
+            width: scaled.extent.width + pad * 2,
+            height: scaled.extent.height + pad * 2
+        ))
+        let placed = scaled.transformed(by: CGAffineTransform(translationX: pad, y: pad)).composited(over: canvas)
+        let context = CIContext(options: [.useSoftwareRenderer: true])
+        guard let cgImage = context.createCGImage(placed, from: placed.extent) else { return nil }
         return UIImage(cgImage: cgImage)
     }
 }
