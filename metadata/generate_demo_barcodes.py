@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Write an EAN-13 PPM for App Review, then convert with sips."""
+"""Write App Review QR and EAN-13 PNGs for the bundled oat-milk code."""
+from __future__ import annotations
 
 from pathlib import Path
 
+from PIL import Image, ImageDraw, ImageFont
+import segno
+
 CODE = "7394376616037"
+ROOT = Path(__file__).resolve().parent
 
 L = {
     "0": "0001101", "1": "0011001", "2": "0010011", "3": "0111101", "4": "0100011",
@@ -23,7 +28,7 @@ PARITY = {
 }
 
 
-def encode(code: str) -> str:
+def encode_ean13(code: str) -> str:
     first, left, right = code[0], code[1:7], code[7:]
     bits = ["101"]
     for digit, kind in zip(left, PARITY[first]):
@@ -35,27 +40,74 @@ def encode(code: str) -> str:
     return "".join(bits)
 
 
-def write_ppm(path: Path, code: str) -> None:
-    pattern = encode(code)
-    quiet = 10
-    module_w = 6
-    bar_h = 220
-    text_h = 56
+def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    name = "Arial Bold.ttf" if bold else "Arial.ttf"
+    path = Path("/System/Library/Fonts/Supplemental") / name
+    if path.exists():
+        return ImageFont.truetype(str(path), size)
+    return ImageFont.load_default()
+
+
+def write_qr() -> Path:
+    qr = segno.make(CODE, error="M", micro=False)
+    raw = ROOT / "demo-qr-oat-milk-1bit.png"
+    qr.save(raw, scale=36, border=6, dark="#000000", light="#FFFFFF")
+    rgb = Image.open(raw).convert("RGB")
+    out = ROOT / "demo-qr-oat-milk.png"
+    rgb.save(out, "PNG")
+    raw.unlink(missing_ok=True)
+
+    card_w, card_h = 1400, 1700
+    card = Image.new("RGB", (card_w, card_h), (255, 255, 255))
+    side = 1100
+    fitted = rgb.resize((side, side), Image.Resampling.NEAREST)
+    card.paste(fitted, ((card_w - side) // 2, 80))
+    draw = ImageDraw.Draw(card)
+    lines = [
+        (font(42, bold=True), "BiteLedger App Review — demo QR"),
+        (font(32), "Oat Milk  •  EAN-13  7394376616037"),
+        (font(28), "Open Scan, fill the red square, hold still."),
+    ]
+    y = 80 + side + 40
+    for face, line in lines:
+        bbox = draw.textbbox((0, 0), line, font=face)
+        tw = bbox[2] - bbox[0]
+        draw.text(((card_w - tw) // 2, y), line, fill=(0, 0, 0), font=face)
+        y += (bbox[3] - bbox[1]) + 16
+    card_path = ROOT / "demo-qr-oat-milk-card.png"
+    card.save(card_path, "PNG")
+    print(f"qr {out} {rgb.size} version={qr.designator}")
+    print(f"card {card_path}")
+    return out
+
+
+def write_ean13() -> Path:
+    pattern = encode_ean13(CODE)
+    quiet = 12
+    module_w = 10
+    bar_h = 360
+    text_h = 80
     width = (len(pattern) + quiet * 2) * module_w
     height = bar_h + text_h
-    pixels = bytearray()
-    for y in range(height):
+    image = Image.new("RGB", (width, height), (255, 255, 255))
+    pixels = image.load()
+    for y in range(bar_h):
         for x in range(width):
-            if y >= bar_h:
-                pixels.extend(b"\xff\xff\xff")
-                continue
             idx = x // module_w - quiet
-            on = 0 <= idx < len(pattern) and pattern[idx] == "1"
-            pixels.extend(b"\x00\x00\x00" if on else b"\xff\xff\xff")
-    path.write_bytes(f"P6\n{width} {height}\n255\n".encode("ascii") + pixels)
+            if 0 <= idx < len(pattern) and pattern[idx] == "1":
+                pixels[x, y] = (0, 0, 0)
+    draw = ImageDraw.Draw(image)
+    label = " ".join([CODE[0], CODE[1:7], CODE[7:]])
+    face = font(36)
+    bbox = draw.textbbox((0, 0), label, font=face)
+    tw = bbox[2] - bbox[0]
+    draw.text(((width - tw) // 2, bar_h + 18), label, fill=(0, 0, 0), font=face)
+    out = ROOT / "demo-ean13-oat-milk.png"
+    image.save(out, "PNG")
+    print(f"ean {out} {image.size}")
+    return out
 
 
 if __name__ == "__main__":
-    dest = Path(__file__).resolve().parent / "demo-ean13-oat-milk.ppm"
-    write_ppm(dest, CODE)
-    print(dest)
+    write_qr()
+    write_ean13()
